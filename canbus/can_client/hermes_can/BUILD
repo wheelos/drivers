@@ -23,7 +23,7 @@ cc_test(
     size = "small",
     srcs = ["hermes_can_client_test.cc"],
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/drivers/canbus/can_client/hermes_can:hermes_can_client",
         "//modules/drivers/canbus/common:canbus_common",
         "@com_google_googletest//:gtest_main",

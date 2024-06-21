@@ -18,7 +18,7 @@ cc_library(
     hdrs = ["gnss_component.h"],
     copts = GNSS_COPTS,
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/canbus/proto:chassis_cc_proto",
         "//modules/common/configs/proto:vehicle_config_cc_proto",
         "//modules/common/monitor_log",

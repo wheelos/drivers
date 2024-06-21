@@ -16,7 +16,7 @@ cc_library(
     hdrs = ["velodyne_convert_component.h"],
     copts = ['-DMODULE_NAME=\\"velodyne\\"'],
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/drivers/lidar/velodyne/parser:convert",
     ],
 )
@@ -44,7 +44,7 @@ cc_library(
     ],
     copts = ['-DMODULE_NAME=\\"velodyne\\"'],
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/drivers/lidar/proto:velodyne_config_cc_proto",
         "//modules/drivers/proto:pointcloud_cc_proto",
         "@boost",

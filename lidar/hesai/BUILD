@@ -33,7 +33,7 @@ cc_library(
     copts = HESAI_COPTS,
     deps = [
         ":parser_factory",
-        "//cyber",
+        "//core/cyber",
         "//modules/drivers/lidar/hesai/driver",
         "//modules/drivers/lidar/proto:hesai_config_cc_proto",
     ],
@@ -48,7 +48,7 @@ cc_library(
         ":hesai40_parser",
         ":hesai64_parser",
         ":parser",
-        "//cyber",
+        "//core/cyber",
     ],
 )
 
@@ -59,7 +59,7 @@ cc_library(
     copts = HESAI_COPTS,
     deps = [
         ":parser",
-        "//cyber",
+        "//core/cyber",
     ],
 )
 
@@ -70,7 +70,7 @@ cc_library(
     copts = HESAI_COPTS,
     deps = [
         ":parser",
-        "//cyber",
+        "//core/cyber",
     ],
 )
 
@@ -82,7 +82,7 @@ cc_library(
     deps = [
         ":tcp_cmd_client",
         ":type_defs",
-        "//cyber",
+        "//core/cyber",
         "//modules/drivers/lidar/proto:hesai_cc_proto",
         "//modules/drivers/lidar/proto:hesai_config_cc_proto",
         "//modules/drivers/proto:pointcloud_cc_proto",
@@ -96,7 +96,7 @@ cc_library(
     copts = HESAI_COPTS,
     deps = [
         ":type_defs",
-        "//cyber",
+        "//core/cyber",
     ],
 )
 
@@ -105,7 +105,7 @@ cc_library(
     srcs = ["parser/tcp_cmd_client.cc"],
     hdrs = ["parser/tcp_cmd_client.h"],
     copts = HESAI_COPTS,
-    deps = ["//cyber"],
+    deps = ["//core/cyber"],
 )
 
 cc_library(

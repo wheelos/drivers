@@ -29,7 +29,7 @@ cc_library(
     hdrs = ["microphone_component.h"],
     copts = MICROPHONE_COPTS,
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/common/util:message_util",
         "//modules/drivers/microphone:respeaker",
         "//modules/drivers/microphone/proto:audio_cc_proto",
@@ -43,7 +43,7 @@ cc_library(
     hdrs = ["respeaker.h"],
     copts = MICROPHONE_COPTS,
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/drivers/microphone/proto:microphone_config_cc_proto",
         "@portaudio",
     ],

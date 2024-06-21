@@ -26,7 +26,7 @@ cc_library(
     hdrs = ["video_driver_component.h"],
     copts = ['-DMODULE_NAME=\\"video\\"'],
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/common/util:message_util",
         "//modules/drivers/video:driver",
         "//modules/drivers/video:socket",
@@ -41,7 +41,7 @@ cc_library(
         "socket_input.h",
     ],
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/drivers/proto:sensor_image_cc_proto",
         "//modules/drivers/video/proto:video_h265cfg_cc_proto",
     ],
@@ -55,7 +55,7 @@ cc_library(
         "socket_input.h",
     ],
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/common/proto:error_code_cc_proto",
         "//modules/common/proto:header_cc_proto",
         "//modules/common/util",

@@ -20,7 +20,7 @@ cc_library(
     hdrs = ["tcp_stream.h"],
     deps = [
         ":stream",
-        "//cyber",
+        "//core/cyber",
         "//modules/common/adapters:adapter_gflags",
         "//modules/common/math",
         "//modules/common/proto:pnc_point_cc_proto",
@@ -36,7 +36,7 @@ cc_library(
         ":ntrip_stream",
         ":serial_stream",
         ":stream",
-        "//cyber",
+        "//core/cyber",
         "//modules/canbus/proto:chassis_cc_proto",
         "//modules/common/adapters:adapter_gflags",
         "//modules/common/configs/proto:vehicle_config_cc_proto",
@@ -57,7 +57,7 @@ cc_library(
     srcs = ["serial_stream.cc"],
     deps = [
         ":stream",
-        "//cyber",
+        "//core/cyber",
         "//modules/drivers/gnss/util:gnss_util",
     ],
 )
@@ -68,7 +68,7 @@ cc_library(
     hdrs = ["tcp_stream.h"],
     deps = [
         ":stream",
-        "//cyber",
+        "//core/cyber",
     ],
 )
 
@@ -77,7 +77,7 @@ cc_library(
     srcs = ["udp_stream.cc"],
     deps = [
         ":stream",
-        "//cyber",
+        "//core/cyber",
         "//modules/drivers/gnss/util:gnss_util",
     ],
 )
@@ -86,7 +86,7 @@ cc_library(
     name = "stream",
     hdrs = ["stream.h"],
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/drivers/gnss/util:gnss_util",
     ],
 )

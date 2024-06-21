@@ -16,7 +16,7 @@ cc_library(
     hdrs = ["pri_sec_fusion_component.h"],
     copts = ['-DMODULE_NAME=\\"velodyne\\"'],
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/drivers/lidar/proto:velodyne_config_cc_proto",
         "//modules/drivers/proto:pointcloud_cc_proto",
         "//modules/transform:buffer",

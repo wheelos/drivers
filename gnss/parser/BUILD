@@ -22,7 +22,7 @@ cc_library(
     copts = ["-Ithird_party/rtklib"],
     deps = [
         ":novatel_parser",
-        "//cyber",
+        "//core/cyber",
         "//modules/common/adapters:adapter_gflags",
         "//modules/common/util:message_util",
         "//modules/drivers/gnss/proto:gnss_best_pose_cc_proto",
@@ -47,7 +47,7 @@ cc_library(
     ],
     copts = ["-Ithird_party/rtklib"],
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/common/adapters:adapter_gflags",
         "//modules/common/proto:error_code_cc_proto",
         "//modules/common/proto:geometry_cc_proto",
@@ -78,7 +78,7 @@ cc_library(
     ],
     copts = ["-Ithird_party/rtklib"],
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/common/adapters:adapter_gflags",
         "//modules/drivers/gnss/proto:config_cc_proto",
         "//modules/drivers/gnss/proto:gnss_raw_observation_cc_proto",

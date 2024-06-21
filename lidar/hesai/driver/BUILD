@@ -12,7 +12,7 @@ cc_library(
     copts = HESAI_COPTS,
     deps = [
         ":driver",
-        "//cyber",
+        "//core/cyber",
         "//modules/drivers/lidar/hesai:parser_factory",
         "//modules/drivers/lidar/proto:hesai_config_cc_proto",
     ],
@@ -24,7 +24,7 @@ cc_library(
     hdrs = ["driver.h"],
     copts = HESAI_COPTS,
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/drivers/lidar/common/driver_factory:driver_base",
         "//modules/drivers/lidar/hesai:parser",
         "//modules/drivers/lidar/hesai:parser_factory",

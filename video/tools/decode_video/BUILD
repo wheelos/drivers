@@ -29,7 +29,7 @@ cc_library(
     srcs = ["h265_decoder.cc"],
     hdrs = ["h265_decoder.h"],
     deps = [
-        "//cyber/common:log",
+        "//core/cyber/common:log",
         "@ffmpeg//:avcodec",
     ],
 )

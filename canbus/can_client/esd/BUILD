@@ -22,7 +22,7 @@ cc_test(
     srcs = if_esd_can(["esd_can_client_test.cc"]),
     deps = if_esd_can([
         ":esd_can_client",
-        "//cyber",
+        "//core/cyber",
         "//modules/drivers/canbus/common:canbus_common",
     ]) + [
         "@com_google_googletest//:gtest_main",

@@ -10,7 +10,7 @@ cc_library(
     hdrs = ["can_client_factory.h"],
     copts = copts_if_esd_can(),
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/common/util:factory",
         "//modules/drivers/canbus/can_client",
         "//modules/drivers/canbus/can_client/fake:fake_can_client",
@@ -37,7 +37,7 @@ cc_binary(
     name = "can_client_tool",
     srcs = ["can_client_tool.cc"],
     deps = [
-        "//cyber/time",
+        "//core/cyber/time",
         "//modules/drivers/canbus/can_client:can_client_factory",
         "//modules/drivers/canbus/proto:can_card_parameter_cc_proto",
         "@com_github_gflags_gflags//:gflags",

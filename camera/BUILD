@@ -38,7 +38,7 @@ cc_library(
     copts = CAMERA_COPTS,
     deps = [
         ":camera",
-        "//cyber",
+        "//core/cyber",
         "//modules/common/proto:error_code_cc_proto",
         "//modules/common/proto:header_cc_proto",
         "//modules/drivers/proto:sensor_image_cc_proto",
@@ -51,7 +51,7 @@ cc_library(
     hdrs = ["compress_component.h"],
     copts = CAMERA_COPTS,
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/common/proto:error_code_cc_proto",
         "//modules/common/proto:header_cc_proto",
         "//modules/drivers/camera/proto:config_cc_proto",
@@ -90,7 +90,7 @@ cc_library(
         no_match_error = "Please Build with an ARM or Linux x86_64 platform",
     ),
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/drivers/camera/proto:config_cc_proto",
         "@ffmpeg//:avcodec",
     ] + if_x86_64(

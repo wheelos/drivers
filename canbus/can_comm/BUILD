@@ -31,8 +31,8 @@ cc_library(
         "protocol_data.h",
     ],
     deps = [
-        "//cyber/common:log",
-        "//cyber/time",
+        "//core/cyber/common:log",
+        "//core/cyber/time",
         "//modules/common/proto:error_code_cc_proto",
         "//modules/drivers/canbus/common:canbus_common",
     ],
@@ -43,7 +43,7 @@ cc_test(
     size = "small",
     srcs = ["can_sender_test.cc"],
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/canbus/proto:ch_cc_proto",
         "//modules/canbus/proto:chassis_cc_proto",
         "//modules/canbus/proto:chassis_detail_cc_proto",
@@ -65,7 +65,7 @@ cc_test(
     size = "small",
     srcs = ["can_receiver_test.cc"],
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/canbus/proto:ch_cc_proto",
         "//modules/canbus/proto:chassis_cc_proto",
         "//modules/canbus/proto:chassis_detail_cc_proto",
@@ -110,7 +110,7 @@ cc_test(
     size = "small",
     srcs = ["message_manager_test.cc"],
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/canbus/proto:chassis_detail_cc_proto",
         "//modules/drivers/canbus/can_comm:message_manager_base",
         "@com_google_googletest//:gtest_main",

@@ -33,7 +33,7 @@ cc_library(
     deps = [
         ":smartereye_device",
         ":smartereye_handler",
-        "//cyber",
+        "//core/cyber",
         "//modules/common/adapters:adapter_gflags",
         "//modules/common/proto:error_code_cc_proto",
         "//modules/common/proto:header_cc_proto",
@@ -50,7 +50,7 @@ cc_library(
     copts = CAMERA_COPTS,
     deps = [
         ":smartereye_handler",
-        "//cyber",
+        "//core/cyber",
         "//modules/drivers/smartereye/proto:config_cc_proto",
         "//third_party/camera_library/smartereye",
     ],
@@ -62,7 +62,7 @@ cc_library(
     hdrs = ["smartereye_handler.h"],
     copts = CAMERA_COPTS,
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//third_party/camera_library/smartereye",
     ],
 )
@@ -73,7 +73,7 @@ cc_library(
     hdrs = ["compress_component.h"],
     copts = CAMERA_COPTS,
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/common/proto:error_code_cc_proto",
         "//modules/common/proto:header_cc_proto",
         "//modules/drivers/proto:sensor_image_cc_proto",

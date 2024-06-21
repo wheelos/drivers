@@ -16,7 +16,7 @@ cc_library(
     copts = ROBOSENSE_COPTS,
     deps = [
         ":driver",
-        "//cyber",
+        "//core/cyber",
     ],
 )
 
@@ -32,7 +32,7 @@ cc_library(
     ],
     copts = ROBOSENSE_COPTS,
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/common/util",
         "//modules/drivers/lidar/common/driver_factory:driver_base",
         "//modules/drivers/lidar/proto:config_proto",

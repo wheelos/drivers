@@ -19,7 +19,7 @@ cc_library(
     hdrs = ["image_decompress.h"],
     copts = ['-DMODULE_NAME=\\"image_decompress\\"'],
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/common/proto:error_code_cc_proto",
         "//modules/common/proto:header_cc_proto",
         "//modules/drivers/proto:sensor_image_cc_proto",

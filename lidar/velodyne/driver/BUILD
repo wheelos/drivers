@@ -16,7 +16,7 @@ cc_library(
     hdrs = ["velodyne_driver_component.h"],
     copts = ['-DMODULE_NAME=\\"velodyne\\"'],
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/common/util:message_util",
         "//modules/drivers/lidar/velodyne/driver",
     ],
@@ -37,7 +37,7 @@ cc_library(
     ],
     copts = ['-DMODULE_NAME=\\"velodyne\\"'],
     deps = [
-        "//cyber",
+        "//core/cyber",
         "//modules/common/util:message_util",
         "//modules/drivers/lidar/common/driver_factory:driver_base",
         "//modules/drivers/lidar/proto:config",

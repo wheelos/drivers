@@ -34,7 +34,7 @@ cc_library(
     copts = ['-DMODULE_NAME=\\"conti_radar\\"'],
     deps = [
         ":conti_radar_message_manager",
-        "//cyber",
+        "//core/cyber",
         "//modules/common/adapters:adapter_gflags",
         "//modules/common/monitor_log",
         "//modules/drivers/canbus/can_client:can_client_factory",
