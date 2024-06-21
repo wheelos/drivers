@@ -1,6 +1,6 @@
 load("@rules_proto//proto:defs.bzl", "proto_library")
 load("@rules_cc//cc:defs.bzl", "cc_library", "cc_proto_library")
-load("//:bazel/python_rules.bzl", "py_proto_library")
+load("@core//:bazel/python_rules.bzl", "py_proto_library")
 
 
 package(default_visibility = ["//visibility:public"])
