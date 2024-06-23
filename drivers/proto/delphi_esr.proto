@@ -2,7 +2,7 @@ syntax = "proto2";
 
 package apollo.drivers;
 
-import "modules/common/proto/header.proto";
+import "common_msgs/basic_msgs/header.proto";
 
 message Esr_status9_5e8 {
   // Report Message

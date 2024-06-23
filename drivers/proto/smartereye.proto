@@ -2,7 +2,7 @@ syntax = "proto2";
 
 package apollo.drivers;
 
-import "modules/common/proto/header.proto";
+import "common_msgs/basic_msgs/header.proto";
 enum LdwVersions {
   LDW_VERSION_C1 = 0;
   LDW_VERSION_C2 = 1;

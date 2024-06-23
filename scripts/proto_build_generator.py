@@ -194,6 +194,7 @@ def main(build_file_path):
         return
 
     workdir = os.path.dirname(build_file_path)
+    print(workdir)
     files_all = [f for f in os.listdir(workdir) if
                  os.path.isfile(os.path.join(workdir, f))
                  and f != "BUILD"

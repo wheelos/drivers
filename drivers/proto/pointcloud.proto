@@ -1,7 +1,7 @@
 syntax = "proto2";
 package apollo.drivers;
 
-import "modules/common/proto/header.proto";
+import "common_msgs/basic_msgs/header.proto";
 
 message PointXYZIT {
   optional float x = 1 [default = nan];

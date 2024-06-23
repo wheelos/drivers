@@ -2,8 +2,8 @@ syntax = "proto2";
 
 package apollo.drivers.gnss;
 
-import "modules/common/proto/header.proto";
-import "modules/common/proto/geometry.proto";
+import "common_msgs/basic_msgs/header.proto";
+import "common_msgs/basic_msgs/geometry.proto";
 
 // Measurements from an inertial measurement unit (IMU). The solution is with
 // respect to the IMU by default.
