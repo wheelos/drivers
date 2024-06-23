@@ -27,9 +27,9 @@ cc_library(
     copts = ['-DMODULE_NAME=\\"video\\"'],
     deps = [
         "//core/cyber",
-        "//modules/common/util:message_util",
-        "//modules/drivers/video:driver",
-        "//modules/drivers/video:socket",
+        "//common_msgs/common/util:message_util",
+        "//common_msgs/drivers/video:driver",
+        "//common_msgs/drivers/video:socket",
     ],
 )
 
@@ -42,8 +42,8 @@ cc_library(
     ],
     deps = [
         "//core/cyber",
-        "//modules/drivers/proto:sensor_image_cc_proto",
-        "//modules/drivers/video/proto:video_h265cfg_cc_proto",
+        "//common_msgs/drivers/proto:sensor_image_cc_proto",
+        "//common_msgs/drivers/video/proto:video_h265cfg_cc_proto",
     ],
 )
 
@@ -56,10 +56,10 @@ cc_library(
     ],
     deps = [
         "//core/cyber",
-        "//modules/common/proto:error_code_cc_proto",
-        "//modules/common/proto:header_cc_proto",
-        "//modules/common/util",
-        "//modules/drivers/proto:sensor_image_cc_proto",
+        "//common_msgs/common/proto:error_code_cc_proto",
+        "//common_msgs/common/proto:header_cc_proto",
+        "//common_msgs/common/util",
+        "//common_msgs/drivers/proto:sensor_image_cc_proto",
     ],
 )
 

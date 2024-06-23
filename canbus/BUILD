@@ -17,10 +17,10 @@ cc_library(
     hdrs = ["sensor_canbus.h"],
     deps = [
         ":sensor_gflags",
-        "//modules/common/monitor_log",
-        "//modules/drivers/canbus/can_client:can_client_factory",
-        "//modules/drivers/canbus/can_comm:can_receiver",
-        "//modules/drivers/canbus/can_comm:message_manager_base",
+        "//common_msgs/common/monitor_log",
+        "//common_msgs/drivers/canbus/can_client:can_client_factory",
+        "//common_msgs/drivers/canbus/can_comm:can_receiver",
+        "//common_msgs/drivers/canbus/can_comm:message_manager_base",
     ],
 )
 

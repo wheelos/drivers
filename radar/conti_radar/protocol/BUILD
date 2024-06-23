@@ -12,11 +12,11 @@ cc_library(
         "*.h",
     ]),
     deps = [
-        "//modules/common/proto:header_cc_proto",
-        "//modules/drivers/canbus/can_comm:message_manager_base",
-        "//modules/drivers/canbus/proto:can_card_parameter_cc_proto",
-        "//modules/drivers/proto:conti_radar_cc_proto",
-        "//modules/drivers/radar/conti_radar/proto:conti_radar_conf_cc_proto",
+        "//common_msgs/common/proto:header_cc_proto",
+        "//common_msgs/drivers/canbus/can_comm:message_manager_base",
+        "//common_msgs/drivers/canbus/proto:can_card_parameter_cc_proto",
+        "//common_msgs/drivers/proto:conti_radar_cc_proto",
+        "//common_msgs/drivers/radar/conti_radar/proto:conti_radar_conf_cc_proto",
     ],
 )
 

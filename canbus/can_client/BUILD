@@ -11,15 +11,15 @@ cc_library(
     copts = copts_if_esd_can(),
     deps = [
         "//core/cyber",
-        "//modules/common/util:factory",
-        "//modules/drivers/canbus/can_client",
-        "//modules/drivers/canbus/can_client/fake:fake_can_client",
-        "//modules/drivers/canbus/can_client/hermes_can:hermes_can_client",
-        "//modules/drivers/canbus/can_client/socket:socket_can_client_raw",
-        "//modules/drivers/canbus/common:canbus_common",
-        "//modules/drivers/canbus/proto:can_card_parameter_cc_proto",
+        "//common_msgs/common/util:factory",
+        "//common_msgs/drivers/canbus/can_client",
+        "//common_msgs/drivers/canbus/can_client/fake:fake_can_client",
+        "//common_msgs/drivers/canbus/can_client/hermes_can:hermes_can_client",
+        "//common_msgs/drivers/canbus/can_client/socket:socket_can_client_raw",
+        "//common_msgs/drivers/canbus/common:canbus_common",
+        "//common_msgs/drivers/canbus/proto:can_card_parameter_cc_proto",
         ] + if_esd_can([
-        "//modules/drivers/canbus/can_client/esd:esd_can_client",
+        "//common_msgs/drivers/canbus/can_client/esd:esd_can_client",
     ]),
 )
 
@@ -27,9 +27,9 @@ cc_library(
     name = "can_client",
     hdrs = ["can_client.h"],
     deps = [
-        "//modules/common/util",
-        "//modules/drivers/canbus/common:canbus_common",
-        "//modules/drivers/canbus/proto:can_card_parameter_cc_proto",
+        "//common_msgs/common/util",
+        "//common_msgs/drivers/canbus/common:canbus_common",
+        "//common_msgs/drivers/canbus/proto:can_card_parameter_cc_proto",
     ],
 )
 
@@ -38,8 +38,8 @@ cc_binary(
     srcs = ["can_client_tool.cc"],
     deps = [
         "//core/cyber/time",
-        "//modules/drivers/canbus/can_client:can_client_factory",
-        "//modules/drivers/canbus/proto:can_card_parameter_cc_proto",
+        "//common_msgs/drivers/canbus/can_client:can_client_factory",
+        "//common_msgs/drivers/canbus/proto:can_card_parameter_cc_proto",
         "@com_github_gflags_gflags//:gflags",
     ],
 )
@@ -49,8 +49,8 @@ cc_test(
     size = "small",
     srcs = ["can_client_factory_test.cc"],
     deps = [
-        "//modules/drivers/canbus/can_client:can_client_factory",
-        "//modules/drivers/canbus/proto:can_card_parameter_cc_proto",
+        "//common_msgs/drivers/canbus/can_client:can_client_factory",
+        "//common_msgs/drivers/canbus/proto:can_card_parameter_cc_proto",
         "@com_google_googletest//:gtest_main",
     ],
 )

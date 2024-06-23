@@ -13,8 +13,8 @@ cc_library(
     deps = [
         ":driver",
         "//core/cyber",
-        "//modules/drivers/lidar/hesai:parser_factory",
-        "//modules/drivers/lidar/proto:hesai_config_cc_proto",
+        "//common_msgs/drivers/lidar/hesai:parser_factory",
+        "//common_msgs/drivers/lidar/proto:hesai_config_cc_proto",
     ],
 )
 
@@ -25,12 +25,12 @@ cc_library(
     copts = HESAI_COPTS,
     deps = [
         "//core/cyber",
-        "//modules/drivers/lidar/common/driver_factory:driver_base",
-        "//modules/drivers/lidar/hesai:parser",
-        "//modules/drivers/lidar/hesai:parser_factory",
-        "//modules/drivers/lidar/hesai:type_defs",
-        "//modules/drivers/lidar/hesai:udp_input",
-        "//modules/drivers/lidar/proto:config_proto",
+        "//common_msgs/drivers/lidar/common/driver_factory:driver_base",
+        "//common_msgs/drivers/lidar/hesai:parser",
+        "//common_msgs/drivers/lidar/hesai:parser_factory",
+        "//common_msgs/drivers/lidar/hesai:type_defs",
+        "//common_msgs/drivers/lidar/hesai:udp_input",
+        "//common_msgs/drivers/lidar/proto:config_proto",
     ],
 )
 

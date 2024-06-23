@@ -19,14 +19,14 @@ cc_library(
     copts = GNSS_COPTS,
     deps = [
         "//core/cyber",
-        "//modules/canbus/proto:chassis_cc_proto",
-        "//modules/common/configs/proto:vehicle_config_cc_proto",
-        "//modules/common/monitor_log",
-        "//modules/common/proto:drive_state_cc_proto",
-        "//modules/common/proto:vehicle_signal_cc_proto",
-        "//modules/drivers/gnss/proto:gnss_status_cc_proto",
-        "//modules/drivers/gnss/proto:ins_cc_proto",
-        "//modules/drivers/gnss/stream:gnss_stream",
+        "//common_msgs/canbus/proto:chassis_cc_proto",
+        "//common_msgs/common/configs/proto:vehicle_config_cc_proto",
+        "//common_msgs/common/monitor_log",
+        "//common_msgs/common/proto:drive_state_cc_proto",
+        "//common_msgs/common/proto:vehicle_signal_cc_proto",
+        "//common_msgs/drivers/gnss/proto:gnss_status_cc_proto",
+        "//common_msgs/drivers/gnss/proto:ins_cc_proto",
+        "//common_msgs/drivers/gnss/stream:gnss_stream",
     ],
 )
 

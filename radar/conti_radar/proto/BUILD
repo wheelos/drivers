@@ -16,7 +16,7 @@ proto_library(
     name = "conti_radar_conf_proto",
     srcs = ["conti_radar_conf.proto"],
     deps = [
-        "//modules/drivers/canbus/proto:can_card_parameter_proto",
+        "//common_msgs/drivers/canbus/proto:can_card_parameter_proto",
     ],
 )
 
@@ -24,6 +24,6 @@ py_proto_library(
     name = "conti_radar_conf_py_pb2",
     deps = [
         ":conti_radar_conf_proto",
-        "//modules/drivers/canbus/proto:can_card_parameter_py_pb2",
+        "//common_msgs/drivers/canbus/proto:can_card_parameter_py_pb2",
     ],
 )

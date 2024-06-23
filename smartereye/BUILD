@@ -34,11 +34,11 @@ cc_library(
         ":smartereye_device",
         ":smartereye_handler",
         "//core/cyber",
-        "//modules/common/adapters:adapter_gflags",
-        "//modules/common/proto:error_code_cc_proto",
-        "//modules/common/proto:header_cc_proto",
-        "//modules/drivers/proto:sensor_image_cc_proto",
-        "//modules/drivers/proto:smartereye_cc_proto",
+        "//common_msgs/common/adapters:adapter_gflags",
+        "//common_msgs/common/proto:error_code_cc_proto",
+        "//common_msgs/common/proto:header_cc_proto",
+        "//common_msgs/drivers/proto:sensor_image_cc_proto",
+        "//common_msgs/drivers/proto:smartereye_cc_proto",
         "//third_party/camera_library/smartereye",
     ],
 )
@@ -51,7 +51,7 @@ cc_library(
     deps = [
         ":smartereye_handler",
         "//core/cyber",
-        "//modules/drivers/smartereye/proto:config_cc_proto",
+        "//common_msgs/drivers/smartereye/proto:config_cc_proto",
         "//third_party/camera_library/smartereye",
     ],
 )
@@ -74,11 +74,11 @@ cc_library(
     copts = CAMERA_COPTS,
     deps = [
         "//core/cyber",
-        "//modules/common/proto:error_code_cc_proto",
-        "//modules/common/proto:header_cc_proto",
-        "//modules/drivers/proto:sensor_image_cc_proto",
-        "//modules/drivers/proto:smartereye_cc_proto",
-        "//modules/drivers/smartereye/proto:config_cc_proto",
+        "//common_msgs/common/proto:error_code_cc_proto",
+        "//common_msgs/common/proto:header_cc_proto",
+        "//common_msgs/drivers/proto:sensor_image_cc_proto",
+        "//common_msgs/drivers/proto:smartereye_cc_proto",
+        "//common_msgs/drivers/smartereye/proto:config_cc_proto",
         "@opencv//:highgui",
     ],
 )

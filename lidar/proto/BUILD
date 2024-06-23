@@ -16,7 +16,7 @@ proto_library(
     name = "velodyne_proto",
     srcs = ["velodyne.proto"],
     deps = [
-        "//modules/common/proto:header_proto",
+        "//common_msgs/common/proto:header_proto",
     ],
 )
 
@@ -24,7 +24,7 @@ py_proto_library(
     name = "velodyne_py_pb2",
     deps = [
         ":velodyne_proto",
-        "//modules/common/proto:header_py_pb2",
+        "//common_msgs/common/proto:header_py_pb2",
     ],
 )
 
@@ -48,7 +48,7 @@ py_proto_library(
     name = "hesai_py_pb2",
     deps = [
         ":hesai_proto",
-        "//modules/common/proto:header_py_pb2",
+        "//common_msgs/common/proto:header_py_pb2",
     ],
 )
 
@@ -56,7 +56,7 @@ proto_library(
     name = "hesai_proto",
     srcs = ["hesai.proto"],
     deps = [
-        "//modules/common/proto:header_proto",
+        "//common_msgs/common/proto:header_proto",
     ],
 )
 
@@ -104,7 +104,7 @@ proto_library(
         "robosense_config.proto",
     ],
     deps = [
-        "//modules/common/proto:header_proto",
+        "//common_msgs/common/proto:header_proto",
     ],
 )
 
@@ -139,7 +139,7 @@ proto_library(
         ":lidar_parameter_proto_lib",
         ":robosense_proto_lib",
         ":velodyne_config_proto",
-        "//modules/common/proto:header_proto",
+        "//common_msgs/common/proto:header_proto",
     ],
 )
 

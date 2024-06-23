@@ -16,7 +16,7 @@ proto_library(
     name = "gnss_best_pose_proto",
     srcs = ["gnss_best_pose.proto"],
     deps = [
-        "//modules/common/proto:header_proto",
+        "//common_msgs/common/proto:header_proto",
     ],
 )
 
@@ -24,7 +24,7 @@ py_proto_library(
     name = "gnss_best_pose_py_pb2",
     deps = [
         ":gnss_best_pose_proto",
-        "//modules/common/proto:header_py_pb2",
+        "//common_msgs/common/proto:header_py_pb2",
     ],
 )
 
@@ -39,7 +39,7 @@ proto_library(
     name = "gnss_status_proto",
     srcs = ["gnss_status.proto"],
     deps = [
-        "//modules/common/proto:header_proto",
+        "//common_msgs/common/proto:header_proto",
     ],
 )
 
@@ -47,7 +47,7 @@ py_proto_library(
     name = "gnss_status_py_pb2",
     deps = [
         ":gnss_status_proto",
-        "//modules/common/proto:header_py_pb2",
+        "//common_msgs/common/proto:header_py_pb2",
     ],
 )
 
@@ -62,8 +62,8 @@ proto_library(
     name = "imu_proto",
     srcs = ["imu.proto"],
     deps = [
-        "//modules/common/proto:geometry_proto",
-        "//modules/common/proto:header_proto",
+        "//common_msgs/common/proto:geometry_proto",
+        "//common_msgs/common/proto:header_proto",
     ],
 )
 
@@ -71,8 +71,8 @@ py_proto_library(
     name = "imu_py_pb2",
     deps = [
         ":imu_proto",
-        "//modules/common/proto:geometry_py_pb2",
-        "//modules/common/proto:header_py_pb2",
+        "//common_msgs/common/proto:geometry_py_pb2",
+        "//common_msgs/common/proto:header_py_pb2",
     ],
 )
 
@@ -87,7 +87,7 @@ proto_library(
     name = "heading_proto",
     srcs = ["heading.proto"],
     deps = [
-        "//modules/common/proto:header_proto",
+        "//common_msgs/common/proto:header_proto",
     ],
 )
 
@@ -95,7 +95,7 @@ py_proto_library(
     name = "heading_py_pb2",
     deps = [
         ":heading_proto",
-        "//modules/common/proto:header_py_pb2",
+        "//common_msgs/common/proto:header_py_pb2",
     ],
 )
 
@@ -148,8 +148,8 @@ proto_library(
     name = "gnss_proto",
     srcs = ["gnss.proto"],
     deps = [
-        "//modules/common/proto:geometry_proto",
-        "//modules/common/proto:header_proto",
+        "//common_msgs/common/proto:geometry_proto",
+        "//common_msgs/common/proto:header_proto",
     ],
 )
 
@@ -157,8 +157,8 @@ py_proto_library(
     name = "gnss_py_pb2",
     deps = [
         ":gnss_proto",
-        "//modules/common/proto:geometry_py_pb2",
-        "//modules/common/proto:header_py_pb2",
+        "//common_msgs/common/proto:geometry_py_pb2",
+        "//common_msgs/common/proto:header_py_pb2",
     ],
 )
 
@@ -173,8 +173,8 @@ proto_library(
     name = "ins_proto",
     srcs = ["ins.proto"],
     deps = [
-        "//modules/common/proto:geometry_proto",
-        "//modules/common/proto:header_proto",
+        "//common_msgs/common/proto:geometry_proto",
+        "//common_msgs/common/proto:header_proto",
     ],
 )
 
@@ -182,7 +182,7 @@ py_proto_library(
     name = "ins_py_pb2",
     deps = [
         ":ins_proto",
-        "//modules/common/proto:geometry_py_pb2",
-        "//modules/common/proto:header_py_pb2",
+        "//common_msgs/common/proto:geometry_py_pb2",
+        "//common_msgs/common/proto:header_py_pb2",
     ],
 )

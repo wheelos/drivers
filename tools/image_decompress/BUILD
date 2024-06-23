@@ -20,10 +20,10 @@ cc_library(
     copts = ['-DMODULE_NAME=\\"image_decompress\\"'],
     deps = [
         "//core/cyber",
-        "//modules/common/proto:error_code_cc_proto",
-        "//modules/common/proto:header_cc_proto",
-        "//modules/drivers/proto:sensor_image_cc_proto",
-        "//modules/drivers/tools/image_decompress/proto:config_cc_proto",
+        "//common_msgs/common/proto:error_code_cc_proto",
+        "//common_msgs/common/proto:header_cc_proto",
+        "//common_msgs/drivers/proto:sensor_image_cc_proto",
+        "//common_msgs/drivers/tools/image_decompress/proto:config_cc_proto",
         "@opencv//:imgcodecs",
     ],
 )

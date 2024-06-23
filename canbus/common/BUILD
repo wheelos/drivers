@@ -11,7 +11,7 @@ cc_library(
         "canbus_consts.h",
     ],
     deps = [
-        "//modules/drivers/canbus:sensor_gflags",
+        "//common_msgs/drivers/canbus:sensor_gflags",
     ],
 )
 
@@ -20,7 +20,7 @@ cc_test(
     size = "small",
     srcs = ["byte_test.cc"],
     deps = [
-        "//modules/drivers/canbus/common:canbus_common",
+        "//common_msgs/drivers/canbus/common:canbus_common",
         "@com_google_googletest//:gtest_main",
     ],
 )

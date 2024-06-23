@@ -7,3 +7,9 @@ git_repository(
     remote = "https://github.com/wheelos/core.git",
     branch = "main",
 )
+
+git_repository(
+    name = "common_msgs",
+    remote = "https://github.com/wheelos/common_msgs.git",
+    branch = "main",
+)

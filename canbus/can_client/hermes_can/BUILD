@@ -12,8 +12,8 @@ cc_library(
         "hermes_can_client.h",
     ],
     deps = [
-        "//modules/common/proto:error_code_cc_proto",
-        "//modules/drivers/canbus/can_client",
+        "//common_msgs/common/proto:error_code_cc_proto",
+        "//common_msgs/drivers/canbus/can_client",
         "//third_party/can_card_library/hermes_can",
     ],
 )
@@ -24,8 +24,8 @@ cc_test(
     srcs = ["hermes_can_client_test.cc"],
     deps = [
         "//core/cyber",
-        "//modules/drivers/canbus/can_client/hermes_can:hermes_can_client",
-        "//modules/drivers/canbus/common:canbus_common",
+        "//common_msgs/drivers/canbus/can_client/hermes_can:hermes_can_client",
+        "//common_msgs/drivers/canbus/common:canbus_common",
         "@com_google_googletest//:gtest_main",
     ],
 )

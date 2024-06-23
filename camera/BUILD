@@ -39,9 +39,9 @@ cc_library(
     deps = [
         ":camera",
         "//core/cyber",
-        "//modules/common/proto:error_code_cc_proto",
-        "//modules/common/proto:header_cc_proto",
-        "//modules/drivers/proto:sensor_image_cc_proto",
+        "//common_msgs/common/proto:error_code_cc_proto",
+        "//common_msgs/common/proto:header_cc_proto",
+        "//common_msgs/drivers/proto:sensor_image_cc_proto",
     ],
 )
 
@@ -52,10 +52,10 @@ cc_library(
     copts = CAMERA_COPTS,
     deps = [
         "//core/cyber",
-        "//modules/common/proto:error_code_cc_proto",
-        "//modules/common/proto:header_cc_proto",
-        "//modules/drivers/camera/proto:config_cc_proto",
-        "//modules/drivers/proto:sensor_image_cc_proto",
+        "//common_msgs/common/proto:error_code_cc_proto",
+        "//common_msgs/common/proto:header_cc_proto",
+        "//common_msgs/drivers/camera/proto:config_cc_proto",
+        "//common_msgs/drivers/proto:sensor_image_cc_proto",
         "@opencv//:core",
         "@opencv//:highgui",
         "@opencv//:imgcodecs",
@@ -91,7 +91,7 @@ cc_library(
     ),
     deps = [
         "//core/cyber",
-        "//modules/drivers/camera/proto:config_cc_proto",
+        "//common_msgs/drivers/camera/proto:config_cc_proto",
         "@ffmpeg//:avcodec",
     ] + if_x86_64(
         ["@adv_plat"],

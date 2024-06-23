@@ -20,8 +20,8 @@ cc_library(
     hdrs = ["lidar_driver_component.h"],
     deps = [
         "//core/cyber",
-        "//modules/drivers/lidar/common/driver_factory:lidar_driver_factory",
-        "//modules/drivers/lidar/proto:config",
+        "//common_msgs/drivers/lidar/common/driver_factory:lidar_driver_factory",
+        "//common_msgs/drivers/lidar/proto:config",
     ],
 )
 

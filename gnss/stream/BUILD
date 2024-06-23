@@ -21,10 +21,10 @@ cc_library(
     deps = [
         ":stream",
         "//core/cyber",
-        "//modules/common/adapters:adapter_gflags",
-        "//modules/common/math",
-        "//modules/common/proto:pnc_point_cc_proto",
-        "//modules/common/util",
+        "//common_msgs/common/adapters:adapter_gflags",
+        "//common_msgs/common/math",
+        "//common_msgs/common/proto:pnc_point_cc_proto",
+        "//common_msgs/common/util",
     ],
 )
 
@@ -37,17 +37,17 @@ cc_library(
         ":serial_stream",
         ":stream",
         "//core/cyber",
-        "//modules/canbus/proto:chassis_cc_proto",
-        "//modules/common/adapters:adapter_gflags",
-        "//modules/common/configs/proto:vehicle_config_cc_proto",
-        "//modules/common/proto:drive_state_cc_proto",
-        "//modules/common/proto:vehicle_signal_cc_proto",
-        "//modules/common/util:message_util",
-        "//modules/drivers/gnss/parser:gnss_parser",
-        "//modules/drivers/gnss/proto:gnss_status_cc_proto",
-        "//modules/drivers/gnss/proto:heading_cc_proto",
-        "//modules/drivers/gnss/proto:imu_cc_proto",
-        "//modules/drivers/gnss/util:gnss_util",
+        "//common_msgs/canbus/proto:chassis_cc_proto",
+        "//common_msgs/common/adapters:adapter_gflags",
+        "//common_msgs/common/configs/proto:vehicle_config_cc_proto",
+        "//common_msgs/common/proto:drive_state_cc_proto",
+        "//common_msgs/common/proto:vehicle_signal_cc_proto",
+        "//common_msgs/common/util:message_util",
+        "//common_msgs/drivers/gnss/parser:gnss_parser",
+        "//common_msgs/drivers/gnss/proto:gnss_status_cc_proto",
+        "//common_msgs/drivers/gnss/proto:heading_cc_proto",
+        "//common_msgs/drivers/gnss/proto:imu_cc_proto",
+        "//common_msgs/drivers/gnss/util:gnss_util",
         "@com_google_absl//absl/strings",
     ],
 )
@@ -58,7 +58,7 @@ cc_library(
     deps = [
         ":stream",
         "//core/cyber",
-        "//modules/drivers/gnss/util:gnss_util",
+        "//common_msgs/drivers/gnss/util:gnss_util",
     ],
 )
 
@@ -78,7 +78,7 @@ cc_library(
     deps = [
         ":stream",
         "//core/cyber",
-        "//modules/drivers/gnss/util:gnss_util",
+        "//common_msgs/drivers/gnss/util:gnss_util",
     ],
 )
 
@@ -87,7 +87,7 @@ cc_library(
     hdrs = ["stream.h"],
     deps = [
         "//core/cyber",
-        "//modules/drivers/gnss/util:gnss_util",
+        "//common_msgs/drivers/gnss/util:gnss_util",
     ],
 )
 

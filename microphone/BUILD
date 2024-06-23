@@ -30,10 +30,10 @@ cc_library(
     copts = MICROPHONE_COPTS,
     deps = [
         "//core/cyber",
-        "//modules/common/util:message_util",
-        "//modules/drivers/microphone:respeaker",
-        "//modules/drivers/microphone/proto:audio_cc_proto",
-        "//modules/drivers/microphone/proto:microphone_config_cc_proto",
+        "//common_msgs/common/util:message_util",
+        "//common_msgs/drivers/microphone:respeaker",
+        "//common_msgs/drivers/microphone/proto:audio_cc_proto",
+        "//common_msgs/drivers/microphone/proto:microphone_config_cc_proto",
     ],
 )
 
@@ -44,7 +44,7 @@ cc_library(
     copts = MICROPHONE_COPTS,
     deps = [
         "//core/cyber",
-        "//modules/drivers/microphone/proto:microphone_config_cc_proto",
+        "//common_msgs/drivers/microphone/proto:microphone_config_cc_proto",
         "@portaudio",
     ],
 )

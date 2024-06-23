@@ -33,13 +33,13 @@ cc_library(
     copts = ROBOSENSE_COPTS,
     deps = [
         "//core/cyber",
-        "//modules/common/util",
-        "//modules/drivers/lidar/common/driver_factory:driver_base",
-        "//modules/drivers/lidar/proto:config_proto",
-        "//modules/drivers/lidar/proto:robosense_proto",
-        "//modules/drivers/lidar/robosense:decoder_factory",
-        "//modules/drivers/lidar/robosense/input",
-        "//modules/drivers/proto:pointcloud_cc_proto",
+        "//common_msgs/common/util",
+        "//common_msgs/drivers/lidar/common/driver_factory:driver_base",
+        "//common_msgs/drivers/lidar/proto:config_proto",
+        "//common_msgs/drivers/lidar/proto:robosense_proto",
+        "//common_msgs/drivers/lidar/robosense:decoder_factory",
+        "//common_msgs/drivers/lidar/robosense/input",
+        "//common_msgs/drivers/proto:pointcloud_cc_proto",
     ],
 )
 

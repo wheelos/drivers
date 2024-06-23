@@ -17,7 +17,7 @@ cc_library(
     copts = ['-DMODULE_NAME=\\"velodyne\\"'],
     deps = [
         "//core/cyber",
-        "//modules/drivers/lidar/velodyne/parser:convert",
+        "//common_msgs/drivers/lidar/velodyne/parser:convert",
     ],
 )
 
@@ -45,8 +45,8 @@ cc_library(
     copts = ['-DMODULE_NAME=\\"velodyne\\"'],
     deps = [
         "//core/cyber",
-        "//modules/drivers/lidar/proto:velodyne_config_cc_proto",
-        "//modules/drivers/proto:pointcloud_cc_proto",
+        "//common_msgs/drivers/lidar/proto:velodyne_config_cc_proto",
+        "//common_msgs/drivers/proto:pointcloud_cc_proto",
         "@boost",
         "@com_github_jbeder_yaml_cpp//:yaml-cpp",
         "@eigen",

@@ -22,7 +22,7 @@ cc_binary(
     linkstatic = False,
     deps = [
         ":hesai_convert_component",
-        "//modules/drivers/lidar/hesai/driver:hesai_component",
+        "//common_msgs/drivers/lidar/hesai/driver:hesai_component",
     ],
 )
 
@@ -34,8 +34,8 @@ cc_library(
     deps = [
         ":parser_factory",
         "//core/cyber",
-        "//modules/drivers/lidar/hesai/driver",
-        "//modules/drivers/lidar/proto:hesai_config_cc_proto",
+        "//common_msgs/drivers/lidar/hesai/driver",
+        "//common_msgs/drivers/lidar/proto:hesai_config_cc_proto",
     ],
 )
 
@@ -83,9 +83,9 @@ cc_library(
         ":tcp_cmd_client",
         ":type_defs",
         "//core/cyber",
-        "//modules/drivers/lidar/proto:hesai_cc_proto",
-        "//modules/drivers/lidar/proto:hesai_config_cc_proto",
-        "//modules/drivers/proto:pointcloud_cc_proto",
+        "//common_msgs/drivers/lidar/proto:hesai_cc_proto",
+        "//common_msgs/drivers/lidar/proto:hesai_config_cc_proto",
+        "//common_msgs/drivers/proto:pointcloud_cc_proto",
     ],
 )
 

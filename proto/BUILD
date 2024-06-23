@@ -16,7 +16,7 @@ proto_library(
     name = "delphi_esr_proto",
     srcs = ["delphi_esr.proto"],
     deps = [
-        "//modules/common/proto:header_proto",
+        "//common_msgs/common/proto:header_proto",
     ],
 )
 
@@ -24,7 +24,7 @@ py_proto_library(
     name = "delphi_esr_py_pb2",
     deps = [
         ":delphi_esr_proto",
-        "//modules/common/proto:header_py_pb2",
+        "//common_msgs/common/proto:header_py_pb2",
     ],
 )
 
@@ -39,7 +39,7 @@ proto_library(
     name = "sensor_image_proto",
     srcs = ["sensor_image.proto"],
     deps = [
-        "//modules/common/proto:header_proto",
+        "//common_msgs/common/proto:header_proto",
     ],
 )
 
@@ -47,7 +47,7 @@ py_proto_library(
     name = "sensor_image_py_pb2",
     deps = [
         ":sensor_image_proto",
-        "//modules/common/proto:header_py_pb2",
+        "//common_msgs/common/proto:header_py_pb2",
     ],
 )
 
@@ -62,7 +62,7 @@ proto_library(
     name = "mobileye_proto",
     srcs = ["mobileye.proto"],
     deps = [
-        "//modules/common/proto:header_proto",
+        "//common_msgs/common/proto:header_proto",
     ],
 )
 
@@ -70,7 +70,7 @@ py_proto_library(
     name = "mobileye_py_pb2",
     deps = [
         ":mobileye_proto",
-        "//modules/common/proto:header_py_pb2",
+        "//common_msgs/common/proto:header_py_pb2",
     ],
 )
 
@@ -85,7 +85,7 @@ proto_library(
     name = "ultrasonic_radar_proto",
     srcs = ["ultrasonic_radar.proto"],
     deps = [
-        "//modules/common/proto:header_proto",
+        "//common_msgs/common/proto:header_proto",
     ],
 )
 
@@ -93,7 +93,7 @@ py_proto_library(
     name = "ultrasonic_radar_py_pb2",
     deps = [
         ":ultrasonic_radar_proto",
-        "//modules/common/proto:header_py_pb2",
+        "//common_msgs/common/proto:header_py_pb2",
     ],
 )
 
@@ -108,8 +108,8 @@ proto_library(
     name = "racobit_radar_proto",
     srcs = ["racobit_radar.proto"],
     deps = [
-        "//modules/common/proto:header_proto",
-        "//modules/drivers/radar/racobit_radar/proto:racobit_radar_conf_proto",
+        "//common_msgs/common/proto:header_proto",
+        "//common_msgs/drivers/radar/racobit_radar/proto:racobit_radar_conf_proto",
     ],
 )
 
@@ -117,8 +117,8 @@ py_proto_library(
     name = "racobit_radar_py_pb2",
     deps = [
         ":racobit_radar_proto",
-        "//modules/common/proto:header_py_pb2",
-        "//modules/drivers/radar/racobit_radar/proto:racobit_radar_conf_py_pb2",
+        "//common_msgs/common/proto:header_py_pb2",
+        "//common_msgs/drivers/radar/racobit_radar/proto:racobit_radar_conf_py_pb2",
     ],
 )
 
@@ -133,8 +133,8 @@ proto_library(
     name = "conti_radar_proto",
     srcs = ["conti_radar.proto"],
     deps = [
-        "//modules/common/proto:header_proto",
-        "//modules/drivers/radar/conti_radar/proto:conti_radar_conf_proto",
+        "//common_msgs/common/proto:header_proto",
+        "//common_msgs/drivers/radar/conti_radar/proto:conti_radar_conf_proto",
     ],
 )
 
@@ -142,8 +142,8 @@ py_proto_library(
     name = "conti_radar_py_pb2",
     deps = [
         ":conti_radar_proto",
-        "//modules/common/proto:header_py_pb2",
-        "//modules/drivers/radar/conti_radar/proto:conti_radar_conf_py_pb2",
+        "//common_msgs/common/proto:header_py_pb2",
+        "//common_msgs/drivers/radar/conti_radar/proto:conti_radar_conf_py_pb2",
     ],
 )
 
@@ -158,7 +158,7 @@ proto_library(
     name = "smartereye_proto",
     srcs = ["smartereye.proto"],
     deps = [
-        "//modules/common/proto:header_proto",
+        "//common_msgs/common/proto:header_proto",
     ],
 )
 
@@ -166,7 +166,7 @@ py_proto_library(
     name = "smartereye_py_pb2",
     deps = [
         ":smartereye_proto",
-        "//modules/common/proto:header_py_pb2",
+        "//common_msgs/common/proto:header_py_pb2",
     ],
 )
 
@@ -181,7 +181,7 @@ proto_library(
     name = "pointcloud_proto",
     srcs = ["pointcloud.proto"],
     deps = [
-        "//modules/common/proto:header_proto",
+        "//common_msgs/common/proto:header_proto",
     ],
 )
 
@@ -189,7 +189,7 @@ py_proto_library(
     name = "pointcloud_py_pb2",
     deps = [
         ":pointcloud_proto",
-        "//modules/common/proto:header_py_pb2",
+        "//common_msgs/common/proto:header_py_pb2",
     ],
 )
 
@@ -204,9 +204,9 @@ proto_library(
     name = "radar_proto",
     srcs = ["radar.proto"],
     deps = [
-        "//modules/common/proto:error_code_proto",
-        "//modules/common/proto:geometry_proto",
-        "//modules/common/proto:header_proto",
+        "//common_msgs/common/proto:error_code_proto",
+        "//common_msgs/common/proto:geometry_proto",
+        "//common_msgs/common/proto:header_proto",
     ],
 )
 
@@ -214,8 +214,8 @@ py_proto_library(
     name = "radar_py_pb2",
     deps = [
         ":radar_proto",
-        "//modules/common/proto:error_code_py_pb2",
-        "//modules/common/proto:geometry_py_pb2",
-        "//modules/common/proto:header_py_pb2",
+        "//common_msgs/common/proto:error_code_py_pb2",
+        "//common_msgs/common/proto:geometry_py_pb2",
+        "//common_msgs/common/proto:header_py_pb2",
     ],
 )

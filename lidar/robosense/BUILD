@@ -21,7 +21,7 @@ cc_binary(
     name = "librobosense_driver_component.so",
     linkshared = True,
     linkstatic = False,
-    deps = ["//modules/drivers/lidar/robosense/driver:robosense_driver_component_lib"],
+    deps = ["//common_msgs/drivers/lidar/robosense/driver:robosense_driver_component_lib"],
 )
 
 cc_library(

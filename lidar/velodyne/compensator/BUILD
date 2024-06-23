@@ -17,10 +17,10 @@ cc_library(
     copts = ['-DMODULE_NAME=\\"velodyne\\"'],
     deps = [
         "//core/cyber",
-        "//modules/common/adapters:adapter_gflags",
-        "//modules/common/latency_recorder",
-        "//modules/drivers/lidar/proto:velodyne_cc_proto",
-        "//modules/drivers/lidar/velodyne/compensator:compensator_lib",
+        "//common_msgs/common/adapters:adapter_gflags",
+        "//common_msgs/common/latency_recorder",
+        "//common_msgs/drivers/lidar/proto:velodyne_cc_proto",
+        "//common_msgs/drivers/lidar/velodyne/compensator:compensator_lib",
     ],
 )
 
@@ -30,9 +30,9 @@ cc_library(
     hdrs = ["compensator.h"],
     copts = ['-DMODULE_NAME=\\"velodyne\\"'],
     deps = [
-        "//modules/drivers/lidar/proto:velodyne_config_cc_proto",
-        "//modules/drivers/proto:pointcloud_cc_proto",
-        "//modules/transform:buffer",
+        "//common_msgs/drivers/lidar/proto:velodyne_config_cc_proto",
+        "//common_msgs/drivers/proto:pointcloud_cc_proto",
+        "//common_msgs/transform:buffer",
         "@eigen",
     ],
 )
