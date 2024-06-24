@@ -15,5 +15,8 @@ cc_proto_library(
 proto_library(
     name = "racobit_radar_conf_proto",
     srcs = ["racobit_radar_conf.proto"],
+    deps = [
+        "//drivers/canbus/proto:can_card_parameter_proto",
+    ]
 )
 

@@ -3,7 +3,7 @@ syntax = "proto2";
 package apollo.drivers;
 
 import "common_msgs/basic_msgs/header.proto";
-import "modules/drivers/radar/racobit_radar/proto/racobit_radar_conf.proto";
+import "drivers/radar/racobit_radar/proto/racobit_radar_conf.proto";
 
 message RacobitClusterListStatus_600 {
   optional int32 near = 1 [default = 0];

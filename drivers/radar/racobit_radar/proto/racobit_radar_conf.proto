@@ -2,7 +2,7 @@ syntax = "proto2";
 
 package apollo.drivers.racobit_radar;
 
-import "modules/drivers/canbus/proto/can_card_parameter.proto";
+import "drivers/canbus/proto/can_card_parameter.proto";
 
 message CanConf {
   optional apollo.drivers.canbus.CANCardParameter can_card_parameter = 1;
