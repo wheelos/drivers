@@ -1,6 +1,5 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library")
 
-load("//tools/platform:build_defs.bzl", "if_x86_64")
 
 package(default_visibility = ["//visibility:public"])
 
@@ -93,9 +92,10 @@ cc_library(
         "//core/cyber",
         "//common_msgs/drivers/camera/proto:config_cc_proto",
         "@ffmpeg//:avcodec",
-    ] + if_x86_64(
-        ["@adv_plat"],
-    ),
+    ] + select({
+        "@platforms//cpu:x86_64": ["@adv_plat"],
+        "//conditions:default": [],
+    }),
 )
 
 
