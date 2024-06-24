@@ -21,7 +21,7 @@ cc_library(
         "//core/cyber",
         "//common_msgs/canbus/proto:chassis_cc_proto",
         "//common_msgs/common/configs/proto:vehicle_config_cc_proto",
-        "//common_msgs/common/monitor_log",
+        "//common/monitor_log",
         "//common_msgs/common/proto:drive_state_cc_proto",
         "//common_msgs/common/proto:vehicle_signal_cc_proto",
         "//common_msgs/drivers/gnss/proto:gnss_status_cc_proto",

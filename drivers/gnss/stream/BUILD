@@ -21,10 +21,10 @@ cc_library(
     deps = [
         ":stream",
         "//core/cyber",
-        "//common_msgs/common/adapters:adapter_gflags",
-        "//common_msgs/common/math",
+        "//common/adapters:adapter_gflags",
+        "//common/math",
         "//common_msgs/common/proto:pnc_point_cc_proto",
-        "//common_msgs/common/util",
+        "//common/util",
     ],
 )
 
@@ -38,11 +38,11 @@ cc_library(
         ":stream",
         "//core/cyber",
         "//common_msgs/canbus/proto:chassis_cc_proto",
-        "//common_msgs/common/adapters:adapter_gflags",
-        "//common_msgs/common/configs/proto:vehicle_config_cc_proto",
+        "//common/adapters:adapter_gflags",
+        "//common/configs/proto:vehicle_config_cc_proto",
         "//common_msgs/common/proto:drive_state_cc_proto",
         "//common_msgs/common/proto:vehicle_signal_cc_proto",
-        "//common_msgs/common/util:message_util",
+        "//common/util:message_util",
         "//common_msgs/drivers/gnss/parser:gnss_parser",
         "//common_msgs/drivers/gnss/proto:gnss_status_cc_proto",
         "//common_msgs/drivers/gnss/proto:heading_cc_proto",

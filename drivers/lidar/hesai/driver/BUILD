@@ -25,7 +25,7 @@ cc_library(
     copts = HESAI_COPTS,
     deps = [
         "//core/cyber",
-        "//common_msgs/drivers/lidar/common/driver_factory:driver_base",
+        "//drivers/lidar/common/driver_factory:driver_base",
         "//common_msgs/drivers/lidar/hesai:parser",
         "//common_msgs/drivers/lidar/hesai:parser_factory",
         "//common_msgs/drivers/lidar/hesai:type_defs",

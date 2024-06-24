@@ -34,7 +34,7 @@ cc_library(
         ":smartereye_device",
         ":smartereye_handler",
         "//core/cyber",
-        "//common_msgs/common/adapters:adapter_gflags",
+        "//common/adapters:adapter_gflags",
         "//common_msgs/common/proto:error_code_cc_proto",
         "//common_msgs/common/proto:header_cc_proto",
         "//common_msgs/drivers/proto:sensor_image_cc_proto",

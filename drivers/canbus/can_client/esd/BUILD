@@ -22,7 +22,7 @@ cc_test(
     deps = [
         ":esd_can_client",
         "//core/cyber",
-        "//common_msgs/drivers/canbus/common:canbus_common",
+        "//drivers/canbus/common:canbus_common",
         "@com_google_googletest//:gtest_main",
     ],
 )

@@ -93,7 +93,7 @@ cc_library(
         "//common_msgs/drivers/camera/proto:config_cc_proto",
         "@ffmpeg//:avcodec",
     ] + select({
-        "@platforms//cpu:x86_64": ["@adv_plat"],
+        # "@platforms//cpu:x86_64": ["@adv_plat"],
         "//conditions:default": [],
     }),
 )

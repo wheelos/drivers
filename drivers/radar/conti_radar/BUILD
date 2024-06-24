@@ -19,7 +19,7 @@ cc_library(
     srcs = ["conti_radar_message_manager.cc"],
     hdrs = ["conti_radar_message_manager.h"],
     deps = [
-        "//common_msgs/common/util:message_util",
+        "//common/util:message_util",
         "//common_msgs/drivers/canbus/can_client:can_client_factory",
         "//common_msgs/drivers/canbus/can_comm:can_sender",
         "//common_msgs/drivers/canbus/can_comm:message_manager_base",
@@ -35,8 +35,8 @@ cc_library(
     deps = [
         ":conti_radar_message_manager",
         "//core/cyber",
-        "//common_msgs/common/adapters:adapter_gflags",
-        "//common_msgs/common/monitor_log",
+        "//common/adapters:adapter_gflags",
+        "//common/monitor_log",
         "//common_msgs/drivers/canbus/can_client:can_client_factory",
         "//common_msgs/drivers/canbus/can_comm:can_receiver",
         "//common_msgs/drivers/canbus/can_comm:message_manager_base",

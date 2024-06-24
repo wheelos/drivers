@@ -25,7 +25,7 @@ cc_test(
     deps = [
         "//core/cyber",
         "//common_msgs/drivers/canbus/can_client/hermes_can:hermes_can_client",
-        "//common_msgs/drivers/canbus/common:canbus_common",
+        "//drivers/canbus/common:canbus_common",
         "@com_google_googletest//:gtest_main",
     ],
 )

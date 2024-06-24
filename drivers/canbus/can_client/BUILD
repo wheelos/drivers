@@ -8,20 +8,20 @@ cc_library(
     srcs = ["can_client_factory.cc"],
     hdrs = ["can_client_factory.h"],
     copts = select({
-        "//tools/platform:use_esd_can": ["-DUSE_ESD_CAN=1"],
+        "//:use_esd_can": ["-DUSE_ESD_CAN=1"],
         "//conditions:default": ["-DUSE_ESD_CAN=0"],
     }),
     deps = [
         "//core/cyber",
-        "//common_msgs/common/util:factory",
+        "//common/util:factory",
         "//common_msgs/drivers/canbus/can_client",
         "//common_msgs/drivers/canbus/can_client/fake:fake_can_client",
         "//common_msgs/drivers/canbus/can_client/hermes_can:hermes_can_client",
         "//common_msgs/drivers/canbus/can_client/socket:socket_can_client_raw",
-        "//common_msgs/drivers/canbus/common:canbus_common",
+        "//drivers/canbus/common:canbus_common",
         "//common_msgs/drivers/canbus/proto:can_card_parameter_cc_proto",
         ] + select({
-            "//tools/platform:use_esd_can": [
+            "//:use_esd_can": [
                 "//common_msgs/drivers/canbus/can_client/esd:esd_can_client",
             ],
             "//conditions:default": [],
@@ -32,8 +32,8 @@ cc_library(
     name = "can_client",
     hdrs = ["can_client.h"],
     deps = [
-        "//common_msgs/common/util",
-        "//common_msgs/drivers/canbus/common:canbus_common",
+        "//common/util",
+        "//drivers/canbus/common:canbus_common",
         "//common_msgs/drivers/canbus/proto:can_card_parameter_cc_proto",
     ],
 )

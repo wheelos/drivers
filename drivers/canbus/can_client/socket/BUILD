@@ -20,7 +20,7 @@ cc_test(
     deps = [
         "//core/cyber",
         "//common_msgs/drivers/canbus/can_client/socket:socket_can_client_raw",
-        "//common_msgs/drivers/canbus/common:canbus_common",
+        "//drivers/canbus/common:canbus_common",
         "@com_google_googletest//:gtest_main",
     ],
 )

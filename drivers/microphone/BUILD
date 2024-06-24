@@ -30,7 +30,7 @@ cc_library(
     copts = MICROPHONE_COPTS,
     deps = [
         "//core/cyber",
-        "//common_msgs/common/util:message_util",
+        "//common/util:message_util",
         "//common_msgs/drivers/microphone:respeaker",
         "//common_msgs/drivers/microphone/proto:audio_cc_proto",
         "//common_msgs/drivers/microphone/proto:microphone_config_cc_proto",
