@@ -1,0 +1,7 @@
+<cyber>
+    <module>
+        <name>hesai40</name>
+        <dag_conf>lidar/hesai/dag/hesai40.dag</dag_conf>
+        <process_name>hesai</process_name>
+    </module>
+</cyber>

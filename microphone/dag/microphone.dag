@@ -1,0 +1,10 @@
+module_config {
+    module_library : "/apollo/bazel-bin/microphone/libmicrophone_component.so"
+    components {
+        class_name : "MicrophoneComponent"
+        config {
+            name : "respeaker"
+            config_file_path : "microphone/conf/respeaker.pb.txt"
+        }
+    }
+}
