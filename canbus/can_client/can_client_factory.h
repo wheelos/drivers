@@ -24,10 +24,10 @@
 #include <memory>
 #include <unordered_map>
 
-#include "cyber/common/macros.h"
-
-#include "modules/common/util/factory.h"
 #include "canbus/can_client/can_client.h"
+#include "mimas/util/factory.h"
+
+#include "cyber/common/macros.h"
 
 /**
  * @namespace apollo::drivers::canbus
@@ -39,15 +39,15 @@ namespace canbus {
 
 /**
  * @class CanClientFactory
- * @brief CanClientFactory inherites apollo::common::util::Factory.
+ * @brief CanClientFactory inherites mimas::util::Factory.
  */
 class CanClientFactory
-    : public apollo::common::util::Factory<CANCardParameter::CANCardBrand,
+    : public mimas::util::Factory<CANCardParameter::CANCardBrand,
                                            CanClient> {
  public:
   /**
    * @brief Register the CAN clients of all brands. This function call the
-   *        Function apollo::common::util::Factory::Register() for all of the
+   *        Function mimas::util::Factory::Register() for all of the
    *        CAN clients.
    */
   void RegisterCanClients();

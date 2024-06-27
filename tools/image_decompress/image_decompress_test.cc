@@ -15,8 +15,9 @@
  *****************************************************************************/
 #include "tools/image_decompress/image_decompress.h"
 
-#include "cyber/init.h"
 #include "gtest/gtest.h"
+
+#include "cyber/init.h"
 
 namespace apollo {
 namespace image_decompress {

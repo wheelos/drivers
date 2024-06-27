@@ -17,13 +17,13 @@
 #pragma once
 
 #include <fcntl.h> /* low-level i/o */
-#include <malloc.h>
 #include <sys/ioctl.h>
 #include <sys/mman.h>
 #include <sys/stat.h>
 #include <sys/time.h>
 #include <sys/types.h>
 #include <unistd.h>
+
 #include <cassert>
 #include <cerrno>
 #include <cstdint>
@@ -32,6 +32,7 @@
 #include <cstring>
 
 #include <immintrin.h>
+#include <malloc.h>
 #include <x86intrin.h>
 
 namespace apollo {

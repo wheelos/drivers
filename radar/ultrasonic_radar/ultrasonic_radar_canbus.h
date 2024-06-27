@@ -25,22 +25,23 @@
 #include <utility>
 #include <vector>
 
-#include "cyber/common/macros.h"
-
-#include "cyber/time/time.h"
-#include "modules/common/monitor_log/monitor_log_buffer.h"
-#include "modules/common/status/status.h"
 #include "canbus/can_client/can_client.h"
 #include "canbus/can_client/can_client_factory.h"
 #include "canbus/can_comm/can_receiver.h"
 #include "canbus/can_comm/can_sender.h"
 #include "canbus/can_comm/message_manager.h"
+#include "canbus/sensor_gflags.h"
+#include "mimas/monitor_log/monitor_log_buffer.h"
+#include "mimas/status/status.h"
+#include "radar/ultrasonic_radar/ultrasonic_radar_message_manager.h"
+
 #include "canbus/proto/can_card_parameter.pb.h"
 #include "canbus/proto/sensor_canbus_conf.pb.h"
-#include "canbus/sensor_gflags.h"
-#include "proto/ultrasonic_radar.pb.h"
+#include "common_msgs/sensor_msgs/ultrasonic_radar.pb.h"
 #include "radar/ultrasonic_radar/proto/ultrasonic_radar_conf.pb.h"
-#include "radar/ultrasonic_radar/ultrasonic_radar_message_manager.h"
+
+#include "cyber/common/macros.h"
+#include "cyber/time/time.h"
 
 /**
  * @namespace apollo::drivers

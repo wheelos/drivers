@@ -25,8 +25,9 @@
 #include <string>
 #include <vector>
 
-#include "common_msgs/basic_msgs/error_code.pb.h"
 #include "canbus/can_client/can_client.h"
+
+#include "common_msgs/basic_msgs/error_code.pb.h"
 
 /**
  * @namespace apollo::drivers::canbus::can

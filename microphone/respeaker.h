@@ -16,13 +16,16 @@
 
 #pragma once
 
+#include <portaudio.h>
+
 #include <memory>
 #include <string>
 
 #include <google/protobuf/message.h>
-#include <portaudio.h>
-#include "cyber/cyber.h"
+
 #include "microphone/proto/microphone_config.pb.h"
+
+#include "cyber/cyber.h"
 
 namespace apollo {
 namespace drivers {

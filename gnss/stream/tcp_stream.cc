@@ -14,6 +14,8 @@
  * limitations under the License.
  *****************************************************************************/
 
+#include "gnss/stream/tcp_stream.h"
+
 #include <arpa/inet.h>
 #include <fcntl.h>
 #include <netinet/in.h>
@@ -26,9 +28,9 @@
 #include <cinttypes>
 #include <iostream>
 
-#include "cyber/cyber.h"
 #include "gnss/stream/stream.h"
-#include "gnss/stream/tcp_stream.h"
+
+#include "cyber/cyber.h"
 
 namespace apollo {
 namespace drivers {

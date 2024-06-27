@@ -21,11 +21,12 @@
 #include <memory>
 #include <vector>
 
-#include "cyber/cyber.h"
-#include "camera/proto/config.pb.h"
-#include "proto/sensor_image.pb.h"
-
 #include "camera/usb_cam.h"
+
+#include "camera/proto/config.pb.h"
+#include "common_msgs/sensor_msgs/sensor_image.pb.h"
+
+#include "cyber/cyber.h"
 
 namespace apollo {
 namespace drivers {

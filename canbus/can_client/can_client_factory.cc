@@ -21,12 +21,11 @@
 #include "canbus/can_client/esd/esd_can_client.h"
 #endif
 
-#include "canbus/can_client/socket/socket_can_client_raw.h"
-
 #include "canbus/can_client/hermes_can/hermes_can_client.h"
+#include "canbus/can_client/socket/socket_can_client_raw.h"
+#include "mimas/util/util.h"
 
 #include "cyber/common/log.h"
-#include "modules/common/util/util.h"
 
 namespace apollo {
 namespace drivers {

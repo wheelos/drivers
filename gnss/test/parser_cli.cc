@@ -22,13 +22,14 @@
 #include <iostream>
 #include <memory>
 
+#include "gnss/parser/data_parser.h"
+#include "gnss/stream/stream.h"
+
+#include "gnss/proto/config.pb.h"
+
 #include "cyber/cyber.h"
 #include "cyber/init.h"
 #include "cyber/record/record_reader.h"
-
-#include "gnss/parser/data_parser.h"
-#include "gnss/proto/config.pb.h"
-#include "gnss/stream/stream.h"
 
 namespace apollo {
 namespace drivers {
@@ -65,8 +66,7 @@ void Parse(const char* filename, const char* file_type,
   std::string type = std::string(file_type);
   config::Config config;
   if (!apollo::cyber::common::GetProtoFromFile(
-          std::string("gnss/conf/gnss_conf.pb.txt"),
-          &config)) {
+          std::string("gnss/conf/gnss_conf.pb.txt"), &config)) {
     std::cout << "Unable to load gnss conf file";
   }
   DataParser* parser = new DataParser(config, node);

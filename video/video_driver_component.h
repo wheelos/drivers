@@ -20,11 +20,13 @@
 #include <string>
 #include <thread>
 
+#include "video/driver.h"
+
+#include "common_msgs/sensor_msgs/sensor_image.pb.h"
+#include "video/proto/video_h265cfg.pb.h"
+
 #include "cyber/base/concurrent_object_pool.h"
 #include "cyber/cyber.h"
-#include "proto/sensor_image.pb.h"
-#include "video/driver.h"
-#include "video/proto/video_h265cfg.pb.h"
 
 namespace apollo {
 namespace drivers {

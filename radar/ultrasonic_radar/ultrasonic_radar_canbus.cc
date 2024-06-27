@@ -16,10 +16,10 @@
 
 #include "radar/ultrasonic_radar/ultrasonic_radar_canbus.h"
 
-#include "cyber/common/file.h"
-#include "modules/common/util/util.h"
-#include "proto/ultrasonic_radar.pb.h"
+#include "mimas/util/util.h"
 #include "radar/ultrasonic_radar/ultrasonic_radar_message_manager.h"
+
+#include "cyber/common/file.h"
 
 /**
  * @namespace apollo::drivers::ultrasonic_radar

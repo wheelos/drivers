@@ -19,11 +19,11 @@
 #include <memory>
 #include <string>
 
-#include "cyber/cyber.h"
-
 #include "gnss/parser/parser.h"
 
 #include "gnss/proto/gnss_raw_observation.pb.h"
+
+#include "cyber/cyber.h"
 
 namespace apollo {
 namespace drivers {

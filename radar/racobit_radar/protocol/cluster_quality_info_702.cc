@@ -15,12 +15,11 @@
  *****************************************************************************/
 
 #include "radar/racobit_radar/protocol/cluster_quality_info_702.h"
-#include "radar/racobit_radar/protocol/const_vars.h"
-
-#include "glog/logging.h"
 
 #include "canbus/common/byte.h"
 #include "canbus/common/canbus_consts.h"
+#include "glog/logging.h"
+#include "radar/racobit_radar/protocol/const_vars.h"
 
 namespace apollo {
 namespace drivers {

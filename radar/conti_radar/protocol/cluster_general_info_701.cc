@@ -16,12 +16,12 @@
 
 #include "radar/conti_radar/protocol/cluster_general_info_701.h"
 
-#include "glog/logging.h"
-
-#include "cyber/time/time.h"
 #include "canbus/common/byte.h"
 #include "canbus/common/canbus_consts.h"
+#include "glog/logging.h"
 #include "radar/conti_radar/protocol/const_vars.h"
+
+#include "cyber/time/time.h"
 
 namespace apollo {
 namespace drivers {

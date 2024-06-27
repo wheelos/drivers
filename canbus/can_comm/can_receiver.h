@@ -30,14 +30,14 @@
 #include <thread>
 #include <vector>
 
-#include "cyber/common/macros.h"
-#include "cyber/cyber.h"
-
-#include "common_msgs/basic_msgs/error_code.pb.h"
-
 #include "canbus/can_client/can_client.h"
 #include "canbus/can_comm/message_manager.h"
 #include "canbus/common/canbus_consts.h"
+
+#include "common_msgs/basic_msgs/error_code.pb.h"
+
+#include "cyber/common/macros.h"
+#include "cyber/cyber.h"
 
 /**
  * @namespace apollo::drivers::canbus

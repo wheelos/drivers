@@ -20,8 +20,9 @@
 #include <string>
 #include <thread>
 
+#include "mimas/util/message_util.h"
+
 #include "cyber/cyber.h"
-#include "modules/common/util/message_util.h"
 
 namespace apollo {
 namespace drivers {

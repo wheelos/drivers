@@ -36,10 +36,11 @@
 
 #pragma once
 
-#include <asm/types.h> /* for videodev2.h */
-#include <malloc.h>
 #include <sys/ioctl.h>
 #include <sys/mman.h>
+
+#include <asm/types.h> /* for videodev2.h */
+#include <malloc.h>
 
 #ifndef __aarch64__
 #include <immintrin.h>
@@ -62,9 +63,9 @@ extern "C" {
 #include <sstream>
 #include <string>
 
-#include "cyber/cyber.h"
-
 #include "camera/proto/config.pb.h"
+
+#include "cyber/cyber.h"
 
 namespace apollo {
 namespace drivers {

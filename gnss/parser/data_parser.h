@@ -22,7 +22,7 @@
 #define ACCEPT_USE_OF_DEPRECATED_PROJ_API_H
 #include <proj_api.h>
 
-#include "cyber/cyber.h"
+#include "gnss/parser/parser.h"
 #include "modules/transform/transform_broadcaster.h"
 
 #include "gnss/proto/config.pb.h"
@@ -36,7 +36,7 @@
 #include "modules/localization/proto/gps.pb.h"
 #include "modules/localization/proto/imu.pb.h"
 
-#include "gnss/parser/parser.h"
+#include "cyber/cyber.h"
 
 namespace apollo {
 namespace drivers {

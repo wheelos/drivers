@@ -17,11 +17,12 @@
 
 #include <memory>
 
-#include "cyber/time/time.h"
+#include "mimas/adapters/adapter_gflags.h"
+#include "mimas/latency_recorder/latency_recorder.h"
 
-#include "modules/common/adapters/adapter_gflags.h"
-#include "modules/common/latency_recorder/latency_recorder.h"
 #include "lidar/proto/velodyne.pb.h"
+
+#include "cyber/time/time.h"
 
 using apollo::cyber::Time;
 

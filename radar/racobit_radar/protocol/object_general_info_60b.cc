@@ -16,12 +16,12 @@
 
 #include "radar/racobit_radar/protocol/object_general_info_60b.h"
 
-#include "glog/logging.h"
-
-#include "cyber/time/time.h"
 #include "canbus/common/byte.h"
 #include "canbus/common/canbus_consts.h"
+#include "glog/logging.h"
 #include "radar/racobit_radar/protocol/const_vars.h"
+
+#include "cyber/time/time.h"
 
 namespace apollo {
 namespace drivers {

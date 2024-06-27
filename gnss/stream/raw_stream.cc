@@ -14,6 +14,8 @@
  * limitations under the License.
  *****************************************************************************/
 
+#include "gnss/stream/raw_stream.h"
+
 #include <cmath>
 #include <ctime>
 #include <memory>
@@ -21,13 +23,13 @@
 #include <vector>
 
 #include "absl/strings/str_cat.h"
+#include "gnss/stream/stream.h"
+#include "mimas/adapters/adapter_gflags.h"
+#include "mimas/util/message_util.h"
+
+#include "gnss/proto/config.pb.h"
 
 #include "cyber/cyber.h"
-#include "modules/common/adapters/adapter_gflags.h"
-#include "modules/common/util/message_util.h"
-#include "gnss/proto/config.pb.h"
-#include "gnss/stream/raw_stream.h"
-#include "gnss/stream/stream.h"
 
 namespace apollo {
 namespace drivers {
@@ -174,7 +176,7 @@ bool RawStream::Init() {
   stream_status_.set_rtk_stream_out_type(StreamStatus::DISCONNECTED);
   stream_writer_ = node_->CreateWriter<StreamStatus>(FLAGS_stream_status_topic);
 
-  common::util::FillHeader("gnss", &stream_status_);
+  mimas::util::FillHeader("gnss", &stream_status_);
   stream_writer_->Write(stream_status_);
 
   // Creates streams.
@@ -470,13 +472,13 @@ void RawStream::StreamStatusCheck() {
   }
 
   if (status_report) {
-    common::util::FillHeader("gnss", &stream_status_);
+    mimas::util::FillHeader("gnss", &stream_status_);
     stream_writer_->Write(stream_status_);
   }
 }
 
 void RawStream::DataSpin() {
-  common::util::FillHeader("gnss", &stream_status_);
+  mimas::util::FillHeader("gnss", &stream_status_);
   stream_writer_->Write(stream_status_);
   while (cyber::OK()) {
     size_t length = data_stream_->read(buffer_, BUFFER_SIZE);

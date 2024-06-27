@@ -27,11 +27,12 @@
 #include <string>
 #include <vector>
 
-#include "common_msgs/basic_msgs/error_code.pb.h"
+#include "canbus/common/byte.h"
+
 #include "canbus/proto/can_card_parameter.pb.h"
+#include "common_msgs/basic_msgs/error_code.pb.h"
 
 #include "cyber/common/log.h"
-#include "canbus/common/byte.h"
 
 /**
  * @namespace apollo::drivers::canbus

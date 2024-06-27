@@ -23,17 +23,19 @@
 #include <string>
 #include <vector>
 
-#include "cyber/cyber.h"
-#include "modules/common/util/message_util.h"
+#include "microphone/respeaker.h"
+#include "mimas/util/message_util.h"
+
 #include "microphone/proto/audio.pb.h"
 #include "microphone/proto/microphone_config.pb.h"
-#include "microphone/respeaker.h"
+
+#include "cyber/cyber.h"
 
 namespace apollo {
 namespace drivers {
 namespace microphone {
 
-using apollo::common::util::FillHeader;
+using mimas::util::FillHeader;
 using apollo::cyber::Component;
 using apollo::cyber::Reader;
 using apollo::cyber::Writer;
@@ -51,8 +53,7 @@ class MicrophoneComponent : public Component<> {
   void fill_channel_data(int chunk_i);
 
   // Configuration
-  int n_chunks_, n_channels_, chunk_, chunk_size_, n_chunk_,
-      sample_width_;
+  int n_chunks_, n_channels_, chunk_, chunk_size_, n_chunk_, sample_width_;
 
   // class data
   std::shared_ptr<AudioData> audio_data_ptr_;

@@ -24,14 +24,15 @@
 #include <memory>
 #include <unordered_map>
 
+#include "lidar/common/driver_factory/driver_base.h"
+#include "lidar/hesai/parser/parser.h"
+#include "mimas/util/factory.h"
+
 #include "lidar/proto/config.pb.h"
 #include "lidar/proto/lidar_parameter.pb.h"
 
 #include "cyber/common/macros.h"
 #include "cyber/cyber.h"
-#include "modules/common/util/factory.h"
-#include "lidar/common/driver_factory/driver_base.h"
-#include "lidar/hesai/parser/parser.h"
 
 /**
  * @namespace apollo::drivers::lidar
@@ -43,7 +44,7 @@ namespace drivers {
 namespace lidar {
 
 class LidarDriverFactory
-    : public apollo::common::util::Factory<
+    : public mimas::util::Factory<
           LidarParameter::LidarBrand, LidarDriver,
           LidarDriver* (*)(const std::shared_ptr<::apollo::cyber::Node>& node,
                            const apollo::drivers::lidar::config& config)> {
@@ -51,7 +52,7 @@ class LidarDriverFactory
   LidarDriverFactory(const apollo::drivers::lidar::config& config);
   /**
    * @brief Register the lidar driver of all brands. This function call the
-   *        Function apollo::common::util::Factory::Register() for all of the
+   *        Function mimas::util::Factory::Register() for all of the
    *        lidar.
    */
   void RegisterLidarClients();

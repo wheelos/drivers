@@ -19,11 +19,10 @@
 #include <cstdint>
 #include <string>
 
+#include "gnss/util/macros.h"
 #include "google/protobuf/message.h"
 
 #include "gnss/proto/config.pb.h"
-
-#include "gnss/util/macros.h"
 
 namespace apollo {
 namespace drivers {

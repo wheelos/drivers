@@ -18,15 +18,15 @@
  * @file
  */
 
-#include "Eigen/Geometry"
+#include "radar/conti_radar/conti_radar_canbus_component.h"
 
-#include "modules/common/adapters/adapter_gflags.h"
+#include "Eigen/Geometry"
 #include "canbus/can_client/can_client_factory.h"
 #include "canbus/can_comm/can_sender.h"
-#include "canbus/proto/sensor_canbus_conf.pb.h"
-#include "proto/conti_radar.pb.h"
-#include "radar/conti_radar/conti_radar_canbus_component.h"
+#include "mimas/adapters/adapter_gflags.h"
 #include "radar/conti_radar/conti_radar_message_manager.h"
+
+#include "canbus/proto/sensor_canbus_conf.pb.h"
 
 /**
  * @namespace apollo::drivers::conti_radar

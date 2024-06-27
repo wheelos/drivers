@@ -23,8 +23,8 @@ cc_library(
     deps = [
         ":novatel_parser",
         "//core/cyber",
-        "//common/adapters:adapter_gflags",
-        "//common/util:message_util",
+        "//mimas/adapters:adapter_gflags",
+        "//mimas/util:message_util",
         "//common_msgs/drivers/gnss/proto:gnss_best_pose_cc_proto",
         "//common_msgs/drivers/gnss/proto:gnss_cc_proto",
         "//common_msgs/drivers/gnss/proto:gnss_status_cc_proto",
@@ -48,7 +48,7 @@ cc_library(
     copts = ["-Ithird_party/rtklib"],
     deps = [
         "//core/cyber",
-        "//common/adapters:adapter_gflags",
+        "//mimas/adapters:adapter_gflags",
         "//common_msgs/common/proto:error_code_cc_proto",
         "//common_msgs/common/proto:geometry_cc_proto",
         "//common_msgs/common/proto:header_cc_proto",
@@ -79,7 +79,7 @@ cc_library(
     copts = ["-Ithird_party/rtklib"],
     deps = [
         "//core/cyber",
-        "//common/adapters:adapter_gflags",
+        "//mimas/adapters:adapter_gflags",
         "//common_msgs/drivers/gnss/proto:config_cc_proto",
         "//common_msgs/drivers/gnss/proto:gnss_raw_observation_cc_proto",
         "//common_msgs/drivers/gnss/util:gnss_util",

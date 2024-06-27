@@ -15,22 +15,24 @@
  *****************************************************************************/
 
 #include <fcntl.h>
-#include <linux/netlink.h>
-#include <linux/serial.h>
 #include <sys/ioctl.h>
 #include <sys/select.h>
 #include <sys/socket.h>
 #include <sys/time.h>
 #include <termios.h>
 #include <unistd.h>
+
 #include <cerrno>
 #include <cstring>
 #include <ctime>
 #include <thread>
 
-#include "cyber/cyber.h"
+#include <linux/netlink.h>
+#include <linux/serial.h>
 
 #include "gnss/stream/stream.h"
+
+#include "cyber/cyber.h"
 
 namespace apollo {
 namespace drivers {

@@ -19,14 +19,13 @@
 #include <string>
 #include <vector>
 
-#include "gflags/gflags.h"
-
-#include "common_msgs/basic_msgs/error_code.pb.h"
-#include "canbus/proto/can_card_parameter.pb.h"
-
 #include "canbus/can_client/can_client.h"
 #include "canbus/can_client/hermes_can/bcan.h"
 #include "canbus/common/canbus_consts.h"
+#include "gflags/gflags.h"
+
+#include "canbus/proto/can_card_parameter.pb.h"
+#include "common_msgs/basic_msgs/error_code.pb.h"
 
 /**
  * @namespace apollo::drivers::canbus::can

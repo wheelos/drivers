@@ -18,10 +18,11 @@
 
 #include <memory>
 
+#include "camera/proto/config.pb.h"
+#include "common_msgs/sensor_msgs/sensor_image.pb.h"
+
 #include "cyber/base/concurrent_object_pool.h"
 #include "cyber/cyber.h"
-#include "camera/proto/config.pb.h"
-#include "proto/sensor_image.pb.h"
 
 namespace apollo {
 namespace drivers {

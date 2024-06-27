@@ -20,10 +20,9 @@
 
 #include "radar/racobit_radar/racobit_radar_canbus_component.h"
 
+#include "mimas/adapters/adapter_gflags.h"
+
 #include "cyber/common/file.h"
-#include "modules/common/adapters/adapter_gflags.h"
-#include "proto/racobit_radar.pb.h"
-#include "radar/racobit_radar/racobit_radar_message_manager.h"
 
 /**
  * @namespace apollo::drivers::racobit_radar

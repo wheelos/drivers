@@ -18,10 +18,11 @@
 
 #include "gtest/gtest.h"
 
-#include "modules/canbus/proto/chassis_detail.pb.h"
-#include "common_msgs/basic_msgs/error_code.pb.h"
 #include "canbus/can_client/fake/fake_can_client.h"
 #include "canbus/can_comm/protocol_data.h"
+
+#include "common_msgs/basic_msgs/error_code.pb.h"
+#include "modules/canbus/proto/chassis_detail.pb.h"
 
 namespace apollo {
 namespace drivers {

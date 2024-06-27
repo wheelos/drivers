@@ -31,13 +31,14 @@
 
 #include "gtest/gtest_prod.h"
 
-#include "cyber/common/macros.h"
-
-#include "cyber/common/log.h"
-#include "cyber/time/time.h"
-#include "common_msgs/basic_msgs/error_code.pb.h"
 #include "canbus/can_client/can_client.h"
 #include "canbus/can_comm/protocol_data.h"
+
+#include "common_msgs/basic_msgs/error_code.pb.h"
+
+#include "cyber/common/log.h"
+#include "cyber/common/macros.h"
+#include "cyber/time/time.h"
 
 /**
  * @namespace apollo::drivers::canbus

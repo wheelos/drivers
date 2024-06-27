@@ -16,10 +16,9 @@
 
 #include "radar/conti_radar/protocol/radar_state_201.h"
 
-#include "glog/logging.h"
-
 #include "canbus/common/byte.h"
 #include "canbus/common/canbus_consts.h"
+#include "glog/logging.h"
 
 namespace apollo {
 namespace drivers {

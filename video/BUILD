@@ -27,7 +27,7 @@ cc_library(
     copts = ['-DMODULE_NAME=\\"video\\"'],
     deps = [
         "//core/cyber",
-        "//common/util:message_util",
+        "//mimas/util:message_util",
         "//common_msgs/drivers/video:driver",
         "//common_msgs/drivers/video:socket",
     ],
@@ -58,7 +58,7 @@ cc_library(
         "//core/cyber",
         "//common_msgs/common/proto:error_code_cc_proto",
         "//common_msgs/common/proto:header_cc_proto",
-        "//common/util",
+        "//mimas/util",
         "//common_msgs/drivers/proto:sensor_image_cc_proto",
     ],
 )

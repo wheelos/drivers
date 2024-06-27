@@ -21,7 +21,7 @@
 
 #include "radar/conti_radar/conti_radar_message_manager.h"
 
-#include "modules/common/util/message_util.h"
+#include "mimas/util/message_util.h"
 #include "radar/conti_radar/protocol/cluster_general_info_701.h"
 #include "radar/conti_radar/protocol/cluster_list_status_600.h"
 #include "radar/conti_radar/protocol/cluster_quality_info_702.h"
@@ -102,7 +102,7 @@ void ContiRadarMessageManager::Parse(const uint32_t message_id,
     }
     sensor_data_.Clear();
     // fill header when receive the general info message
-    common::util::FillHeader("conti_radar", &sensor_data_);
+    mimas::util::FillHeader("conti_radar", &sensor_data_);
   }
 
   sensor_protocol_data->Parse(data, length, &sensor_data_);

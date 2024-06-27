@@ -25,20 +25,21 @@
 #include <utility>
 #include <vector>
 
-#include "cyber/cyber.h"
-
-#include "modules/common/monitor_log/monitor_log_buffer.h"
-#include "modules/common/util/util.h"
 #include "canbus/can_client/can_client.h"
 #include "canbus/can_comm/can_receiver.h"
 #include "canbus/can_comm/message_manager.h"
-#include "canbus/proto/can_card_parameter.pb.h"
-#include "proto/conti_radar.pb.h"
+#include "mimas/monitor_log/monitor_log_buffer.h"
+#include "mimas/util/util.h"
 #include "radar/conti_radar/conti_radar_message_manager.h"
 #include "radar/conti_radar/protocol/motion_input_speed_300.h"
 #include "radar/conti_radar/protocol/motion_input_yawrate_301.h"
 #include "radar/conti_radar/protocol/radar_config_200.h"
+
+#include "canbus/proto/can_card_parameter.pb.h"
+#include "common_msgs/sensor_msgs/conti_radar.pb.h"
 #include "modules/localization/proto/localization.pb.h"
+
+#include "cyber/cyber.h"
 
 /**
  * @namespace apollo::drivers

@@ -24,18 +24,19 @@
 #include <memory>
 #include <vector>
 
-#include "cyber/cyber.h"
-
 #include "gnss/parser/novatel_messages.h"
 #include "gnss/parser/parser.h"
 #include "gnss/parser/rtcm_decode.h"
+#include "gnss/util/time_conversion.h"
+
 #include "gnss/proto/gnss.pb.h"
 #include "gnss/proto/gnss_best_pose.pb.h"
 #include "gnss/proto/gnss_raw_observation.pb.h"
 #include "gnss/proto/heading.pb.h"
 #include "gnss/proto/imu.pb.h"
 #include "gnss/proto/ins.pb.h"
-#include "gnss/util/time_conversion.h"
+
+#include "cyber/cyber.h"
 
 namespace apollo {
 namespace drivers {

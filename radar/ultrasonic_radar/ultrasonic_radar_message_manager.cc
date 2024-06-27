@@ -21,7 +21,7 @@
 
 #include "radar/ultrasonic_radar/ultrasonic_radar_message_manager.h"
 
-#include "modules/common/util/message_util.h"
+#include "mimas/util/message_util.h"
 
 namespace apollo {
 namespace drivers {
@@ -57,7 +57,7 @@ void UltrasonicRadarMessageManager::Parse(const uint32_t message_id,
   } else if (message_id == 0x304) {
     sensor_data_.set_ranges(10, data[1]);
     sensor_data_.set_ranges(11, data[2]);
-    common::util::FillHeader("ultrasonic_radar", &sensor_data_);
+    mimas::util::FillHeader("ultrasonic_radar", &sensor_data_);
     ultrasonic_radar_writer_->Write(sensor_data_);
   }
 

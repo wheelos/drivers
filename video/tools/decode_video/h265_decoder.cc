@@ -14,10 +14,11 @@
  * limitations under the License.
  *****************************************************************************/
 
+#include "video/tools/decode_video/h265_decoder.h"
+
 #include <algorithm>
 
 #include "cyber/common/log.h"
-#include "video/tools/decode_video/h265_decoder.h"
 
 namespace apollo {
 namespace drivers {

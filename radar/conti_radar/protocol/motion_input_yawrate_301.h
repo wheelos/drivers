@@ -19,7 +19,8 @@
 #include <cmath>
 
 #include "canbus/can_comm/protocol_data.h"
-#include "proto/conti_radar.pb.h"
+
+#include "common_msgs/sensor_msgs/conti_radar.pb.h"
 
 namespace apollo {
 namespace drivers {

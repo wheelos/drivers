@@ -23,8 +23,9 @@
 
 #include "gtest/gtest.h"
 
-#include "cyber/common/log.h"
 #include "canbus/common/byte.h"
+
+#include "cyber/common/log.h"
 
 namespace apollo {
 namespace drivers {

@@ -19,7 +19,7 @@ cc_library(
     hdrs = ["frame_processor.h"],
     deps = [
         ":h265_decoder",
-        "//common/util",
+        "//mimas/util",
         "@com_google_absl//absl/strings",
     ],
 )

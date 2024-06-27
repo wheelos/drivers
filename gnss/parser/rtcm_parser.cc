@@ -18,11 +18,13 @@
 
 #include <memory>
 
-#include "cyber/cyber.h"
-#include "modules/common/adapters/adapter_gflags.h"
 #include "gnss/parser/parser.h"
 #include "gnss/parser/rtcm3_parser.h"
+#include "mimas/adapters/adapter_gflags.h"
+
 #include "gnss/proto/gnss_raw_observation.pb.h"
+
+#include "cyber/cyber.h"
 
 namespace apollo {
 namespace drivers {

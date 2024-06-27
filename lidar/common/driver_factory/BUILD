@@ -10,7 +10,7 @@ cc_library(
     deps = [
         ":driver_base",
         "//core/cyber",
-        "//common/util:factory",
+        "//mimas/util:factory",
         "//common_msgs/drivers/lidar/hesai/driver",
         "//common_msgs/drivers/lidar/proto:config",
         "//common_msgs/drivers/lidar/proto:lidar_parameter",
@@ -23,8 +23,8 @@ cc_library(
     name = "driver_base",
     hdrs = ["driver_base.h"],
     deps = [
-        "//common/util",
-        "//common/util:factory",
+        "//mimas/util",
+        "//mimas/util:factory",
     ],
 )
 

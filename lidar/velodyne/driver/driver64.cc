@@ -18,9 +18,8 @@
 #include <ctime>
 #include <string>
 
-#include "modules/common/util/message_util.h"
 #include "lidar/velodyne/driver/driver.h"
-// #include "ros/ros.h"
+#include "mimas/util/message_util.h"
 
 namespace apollo {
 namespace drivers {
@@ -136,7 +135,7 @@ void Velodyne64Driver::DevicePoll() {
     std::shared_ptr<VelodyneScan> scan = std::make_shared<VelodyneScan>();
     bool ret = Poll(scan);
     if (ret) {
-      apollo::common::util::FillHeader("velodyne", scan.get());
+      mimas::util::FillHeader("velodyne", scan.get());
       writer_->Write(scan);
     } else {
       AWARN << "device poll failed";

@@ -17,8 +17,8 @@ cc_library(
     copts = ['-DMODULE_NAME=\\"velodyne\\"'],
     deps = [
         "//core/cyber",
-        "//common/adapters:adapter_gflags",
-        "//common/latency_recorder",
+        "//mimas/adapters:adapter_gflags",
+        "//mimas/latency_recorder",
         "//common_msgs/drivers/lidar/proto:velodyne_cc_proto",
         "//common_msgs/drivers/lidar/velodyne/compensator:compensator_lib",
     ],

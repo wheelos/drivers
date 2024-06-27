@@ -20,7 +20,7 @@ cc_library(
     hdrs = ["ultrasonic_radar_message_manager.h"],
     deps = [
         "//common_msgs/common/proto:header_cc_proto",
-        "//common/util:message_util",
+        "//mimas/util:message_util",
         "//common_msgs/drivers/canbus:sensor_gflags",
         "//common_msgs/drivers/canbus/can_client:can_client_factory",
         "//common_msgs/drivers/canbus/can_comm:can_sender",

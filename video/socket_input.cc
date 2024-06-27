@@ -14,6 +14,8 @@
  * limitations under the License.
  *****************************************************************************/
 
+#include "video/socket_input.h"
+
 #include <arpa/inet.h>
 #include <fcntl.h>
 #include <poll.h>
@@ -24,9 +26,9 @@
 #include <cerrno>
 #include <memory>
 
-#include "cyber/cyber.h"
 #include "video/input.h"
-#include "video/socket_input.h"
+
+#include "cyber/cyber.h"
 
 namespace apollo {
 namespace drivers {

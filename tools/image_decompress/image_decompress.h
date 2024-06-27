@@ -18,9 +18,10 @@
 
 #include <memory>
 
-#include "cyber/component/component.h"
-#include "proto/sensor_image.pb.h"
+#include "common_msgs/sensor_msgs/sensor_image.pb.h"
 #include "tools/image_decompress/proto/config.pb.h"
+
+#include "cyber/component/component.h"
 
 namespace apollo {
 namespace image_decompress {

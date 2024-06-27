@@ -18,10 +18,11 @@
 
 #include <memory>
 
+#include "lidar/common/driver_factory/lidar_driver_factory.h"
+
 #include "lidar/proto/config.pb.h"
 
 #include "cyber/cyber.h"
-#include "lidar/common/driver_factory/lidar_driver_factory.h"
 
 namespace apollo {
 namespace drivers {

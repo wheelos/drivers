@@ -21,8 +21,9 @@
 #include <sstream>
 
 #include "absl/strings/str_cat.h"
-#include "cyber/common/log.h"
 #include "video/tools/decode_video/h265_decoder.h"
+
+#include "cyber/common/log.h"
 
 namespace apollo {
 namespace drivers {

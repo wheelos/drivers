@@ -22,15 +22,15 @@
 
 #include <memory>
 
-#include "cyber/cyber.h"
-
 #include "canbus/can_client/can_client_factory.h"
 #include "canbus/can_comm/can_sender.h"
 #include "canbus/can_comm/message_manager.h"
-#include "proto/racobit_radar.pb.h"
+#include "canbus/sensor_gflags.h"
 #include "radar/racobit_radar/protocol/radar_config_200.h"
 
-#include "canbus/sensor_gflags.h"
+#include "common_msgs/sensor_msgs/racobit_radar.pb.h"
+
+#include "cyber/cyber.h"
 
 namespace apollo {
 namespace drivers {

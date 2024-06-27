@@ -21,15 +21,15 @@
 #include <string>
 #include <thread>
 
-#include "cyber/cyber.h"
-
-#include "modules/canbus/proto/chassis.pb.h"
-#include "gnss/proto/config.pb.h"
-#include "gnss/proto/gnss_status.pb.h"
-
 #include "gnss/parser/data_parser.h"
 #include "gnss/parser/rtcm_parser.h"
 #include "gnss/stream/stream.h"
+
+#include "gnss/proto/config.pb.h"
+#include "gnss/proto/gnss_status.pb.h"
+#include "modules/canbus/proto/chassis.pb.h"
+
+#include "cyber/cyber.h"
 
 namespace apollo {
 namespace drivers {

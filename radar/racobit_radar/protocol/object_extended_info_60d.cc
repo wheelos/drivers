@@ -16,9 +16,9 @@
 
 #include "radar/racobit_radar/protocol/object_extended_info_60d.h"
 
-#include "glog/logging.h"
 #include "canbus/common/byte.h"
 #include "canbus/common/canbus_consts.h"
+#include "glog/logging.h"
 #include "radar/racobit_radar/protocol/const_vars.h"
 
 namespace apollo {

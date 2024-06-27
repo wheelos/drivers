@@ -22,8 +22,9 @@
 #include <string>
 #include <thread>
 
+#include "mimas/util/message_util.h"
+
 #include "cyber/cyber.h"
-#include "modules/common/util/message_util.h"
 
 namespace apollo {
 namespace drivers {
@@ -291,7 +292,7 @@ void VelodyneDriver::DevicePoll() {
     std::shared_ptr<VelodyneScan> scan = std::make_shared<VelodyneScan>();
     bool ret = Poll(scan);
     if (ret) {
-      apollo::common::util::FillHeader("velodyne", scan.get());
+      mimas::util::FillHeader("velodyne", scan.get());
       writer_->Write(scan);
     } else {
       AWARN << "device poll failed";

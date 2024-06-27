@@ -28,11 +28,13 @@
 #include <unordered_map>
 #include <vector>
 
-#include "cyber/common/log.h"
-#include "cyber/time/time.h"
-#include "common_msgs/basic_msgs/error_code.pb.h"
 #include "canbus/can_comm/protocol_data.h"
 #include "canbus/common/byte.h"
+
+#include "common_msgs/basic_msgs/error_code.pb.h"
+
+#include "cyber/common/log.h"
+#include "cyber/time/time.h"
 
 /**
  * @namespace apollo::drivers::canbus

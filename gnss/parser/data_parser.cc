@@ -22,16 +22,17 @@
 
 #include "Eigen/Geometry"
 #include "boost/array.hpp"
-#include "cyber/cyber.h"
-#include "modules/common/adapters/adapter_gflags.h"
-#include "modules/common/util/message_util.h"
+#include "gnss/parser/parser.h"
+#include "gnss/util/time_conversion.h"
+#include "mimas/adapters/adapter_gflags.h"
+#include "mimas/util/message_util.h"
+
 #include "gnss/proto/gnss_best_pose.pb.h"
 #include "gnss/proto/gnss_raw_observation.pb.h"
 #include "gnss/proto/heading.pb.h"
 #include "modules/localization/proto/imu.pb.h"
 
-#include "gnss/parser/parser.h"
-#include "gnss/util/time_conversion.h"
+#include "cyber/cyber.h"
 
 namespace apollo {
 namespace drivers {
@@ -98,9 +99,9 @@ bool DataParser::Init() {
   rawimu_writer_ = node_->CreateWriter<Imu>(FLAGS_raw_imu_topic);
   gps_writer_ = node_->CreateWriter<Gps>(FLAGS_gps_topic);
 
-  common::util::FillHeader("gnss", &ins_status_);
+  mimas::util::FillHeader("gnss", &ins_status_);
   insstatus_writer_->Write(ins_status_);
-  common::util::FillHeader("gnss", &gnss_status_);
+  mimas::util::FillHeader("gnss", &gnss_status_);
   gnssstatus_writer_->Write(gnss_status_);
 
   AINFO << "Creating data parser of format: " << config_.data().format();
@@ -155,7 +156,7 @@ void DataParser::CheckInsStatus(::apollo::drivers::gnss::Ins *ins) {
         break;
     }
 
-    common::util::FillHeader("gnss", &ins_status_);
+    mimas::util::FillHeader("gnss", &ins_status_);
     insstatus_writer_->Write(ins_status_);
   }
 }
@@ -171,7 +172,7 @@ void DataParser::CheckGnssStatus(::apollo::drivers::gnss::Gnss *gnss) {
   } else {
     gnss_status_.set_solution_completed(false);
   }
-  common::util::FillHeader("gnss", &gnss_status_);
+  mimas::util::FillHeader("gnss", &gnss_status_);
   gnssstatus_writer_->Write(gnss_status_);
 }
 
@@ -220,13 +221,13 @@ void DataParser::DispatchMessage(Parser::MessageType type, MessagePtr message) {
 
 void DataParser::PublishInsStat(const MessagePtr message) {
   auto ins_stat = std::make_shared<InsStat>(*As<InsStat>(message));
-  common::util::FillHeader("gnss", ins_stat.get());
+  mimas::util::FillHeader("gnss", ins_stat.get());
   insstat_writer_->Write(ins_stat);
 }
 
 void DataParser::PublishBestpos(const MessagePtr message) {
   auto bestpos = std::make_shared<GnssBestPose>(*As<GnssBestPose>(message));
-  common::util::FillHeader("gnss", bestpos.get());
+  mimas::util::FillHeader("gnss", bestpos.get());
   gnssbestpose_writer_->Write(bestpos);
 }
 
@@ -243,7 +244,7 @@ void DataParser::PublishImu(const MessagePtr message) {
   raw_imu->mutable_angular_velocity()->set_y(imu->angular_velocity().x());
   raw_imu->mutable_angular_velocity()->set_z(imu->angular_velocity().z());
 
-  common::util::FillHeader("gnss", raw_imu.get());
+  mimas::util::FillHeader("gnss", raw_imu.get());
   rawimu_writer_->Write(raw_imu);
 }
 

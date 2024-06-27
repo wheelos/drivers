@@ -22,14 +22,14 @@
 
 #include <memory>
 
-#include "cyber/cyber.h"
-
 #include "canbus/can_client/can_client_factory.h"
 #include "canbus/can_comm/can_sender.h"
 #include "canbus/can_comm/message_manager.h"
-#include "proto/ultrasonic_radar.pb.h"
-
 #include "canbus/sensor_gflags.h"
+
+#include "common_msgs/sensor_msgs/ultrasonic_radar.pb.h"
+
+#include "cyber/cyber.h"
 
 namespace apollo {
 namespace drivers {

@@ -22,9 +22,9 @@
 #include <string>
 #include <vector>
 
-#include "cyber/cyber.h"
-
 #include "gnss/util/macros.h"
+
+#include "cyber/cyber.h"
 
 namespace apollo {
 namespace drivers {

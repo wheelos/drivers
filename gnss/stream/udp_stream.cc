@@ -20,11 +20,12 @@
 #include <sys/socket.h>
 #include <sys/types.h>
 #include <unistd.h>
+
 #include <cerrno>
 
-#include "cyber/cyber.h"
-
 #include "gnss/stream/stream.h"
+
+#include "cyber/cyber.h"
 
 namespace apollo {
 namespace drivers {

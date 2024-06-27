@@ -21,15 +21,11 @@
 
 #pragma once
 
-#include <unistd.h>
-
 #include <net/if.h>
 #include <sys/ioctl.h>
 #include <sys/socket.h>
 #include <sys/types.h>
-
-#include <linux/can.h>
-#include <linux/can/raw.h>
+#include <unistd.h>
 
 #include <cstdio>
 #include <cstdlib>
@@ -37,12 +33,15 @@
 #include <string>
 #include <vector>
 
-#include "common_msgs/basic_msgs/error_code.pb.h"
-#include "canbus/proto/can_card_parameter.pb.h"
+#include <linux/can.h>
+#include <linux/can/raw.h>
 
-#include "gflags/gflags.h"
 #include "canbus/can_client/can_client.h"
 #include "canbus/common/canbus_consts.h"
+#include "gflags/gflags.h"
+
+#include "canbus/proto/can_card_parameter.pb.h"
+#include "common_msgs/basic_msgs/error_code.pb.h"
 
 /**
  * @namespace apollo::canbus::can

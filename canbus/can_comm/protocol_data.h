@@ -24,8 +24,9 @@
 #include <cmath>
 #include <numeric>
 
-#include "cyber/common/log.h"
 #include "canbus/common/canbus_consts.h"
+
+#include "cyber/common/log.h"
 
 /**
  * @namespace apollo::drivers::canbus

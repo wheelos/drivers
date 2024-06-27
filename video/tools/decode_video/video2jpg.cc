@@ -15,9 +15,9 @@
  *****************************************************************************/
 
 #include "gflags/gflags.h"
+#include "video/tools/decode_video/frame_processor.h"
 
 #include "cyber/common/log.h"
-#include "video/tools/decode_video/frame_processor.h"
 
 using apollo::drivers::video::FrameProcessor;
 

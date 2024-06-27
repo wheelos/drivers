@@ -15,15 +15,16 @@
  *****************************************************************************/
 
 #include <unistd.h>
+
 #include <iostream>
 #include <mutex>
 
-#include "cyber/cyber.h"
-
-#include "modules/common/util/string_util.h"
-#include "modules/common/util/util.h"
 #include "gnss/stream/stream.h"
 #include "gnss/stream/tcp_stream.h"
+#include "mimas/util/string_util.h"
+#include "mimas/util/util.h"
+
+#include "cyber/cyber.h"
 
 namespace {
 
@@ -75,7 +76,7 @@ NtripStream::NtripStream(const std::string& address, uint16_t port,
                   "User-Agent: NTRIP gnss_driver/0.0\r\n"
                   "accept: */* \r\n"
                   "Authorization: Basic " +
-                  common::util::EncodeBase64(user + ":" + passwd) + "\r\n\r\n"),
+                  mimas::util::EncodeBase64(user + ":" + passwd) + "\r\n\r\n"),
       timeout_s_(timeout_s),
       tcp_stream_(new TcpStream(address.c_str(), port, 0, false)) {}
 

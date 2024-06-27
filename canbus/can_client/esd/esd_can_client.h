@@ -24,12 +24,13 @@
 #include <string>
 #include <vector>
 
-#include "esd_can/include/ntcan.h"
-#include "gflags/gflags.h"
-#include "common_msgs/basic_msgs/error_code.pb.h"
 #include "canbus/can_client/can_client.h"
 #include "canbus/common/canbus_consts.h"
+#include "esd_can/include/ntcan.h"
+#include "gflags/gflags.h"
+
 #include "canbus/proto/can_card_parameter.pb.h"
+#include "common_msgs/basic_msgs/error_code.pb.h"
 
 /**
  * @namespace apollo::drivers::canbus::can

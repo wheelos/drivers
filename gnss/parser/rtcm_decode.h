@@ -17,6 +17,7 @@
 #pragma once
 
 #include <rtklib.h>
+
 #include "gnss/proto/gnss_raw_observation.pb.h"
 
 namespace apollo {

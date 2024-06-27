@@ -23,12 +23,12 @@
 #include <memory>
 #include <vector>
 
+#include "gnss/parser/parser.h"
+#include "gnss/parser/rtcm_decode.h"
+
 #include "gnss/proto/gnss_raw_observation.pb.h"
 
 #include "cyber/cyber.h"
-
-#include "gnss/parser/parser.h"
-#include "gnss/parser/rtcm_decode.h"
 
 namespace apollo {
 namespace drivers {
