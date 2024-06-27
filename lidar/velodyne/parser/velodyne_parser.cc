@@ -14,10 +14,11 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/cyber.h"
+#include "lidar/velodyne/parser/velodyne_parser.h"
 
 #include "lidar/velodyne/parser/util.h"
-#include "lidar/velodyne/parser/velodyne_parser.h"
+
+#include "cyber/cyber.h"
 
 namespace apollo {
 namespace drivers {

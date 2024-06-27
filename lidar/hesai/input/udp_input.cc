@@ -24,7 +24,6 @@
 
 #include <cerrno>
 #include <cstring>
-
 #include <sstream>
 
 #include "cyber/cyber.h"

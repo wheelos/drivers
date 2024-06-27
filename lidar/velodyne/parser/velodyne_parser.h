@@ -59,13 +59,13 @@
 
 #include <boost/format.hpp>
 
-#include "lidar/proto/velodyne.pb.h"
-#include "lidar/proto/velodyne_config.pb.h"
-#include "proto/pointcloud.pb.h"
-
 #include "lidar/velodyne/parser/calibration.h"
 #include "lidar/velodyne/parser/const_variables.h"
 #include "lidar/velodyne/parser/online_calibration.h"
+
+#include "common_msgs/sensor_msgs/pointcloud.pb.h"
+#include "lidar/proto/velodyne.pb.h"
+#include "lidar/proto/velodyne_config.pb.h"
 
 namespace apollo {
 namespace drivers {

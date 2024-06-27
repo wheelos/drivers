@@ -19,10 +19,11 @@
 #include <memory>
 #include <string>
 
-#include "proto/pointcloud.pb.h"
 #include "lidar/velodyne/parser/velodyne_parser.h"
-#include "lidar/proto/velodyne_config.pb.h"
+
+#include "common_msgs/sensor_msgs/pointcloud.pb.h"
 #include "lidar/proto/velodyne.pb.h"
+#include "lidar/proto/velodyne_config.pb.h"
 
 namespace apollo {
 namespace drivers {

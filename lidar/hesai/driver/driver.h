@@ -28,13 +28,14 @@
 #include <thread>
 #include <vector>
 
-#include "lidar/proto/config.pb.h"
-
-#include "cyber/cyber.h"
 #include "lidar/common/driver_factory/driver_base.h"
 #include "lidar/hesai/input/udp_input.h"
 #include "lidar/hesai/parser/parser.h"
 #include "lidar/hesai/parser/parser_factory.h"
+
+#include "lidar/proto/config.pb.h"
+
+#include "cyber/cyber.h"
 
 namespace apollo {
 namespace drivers {

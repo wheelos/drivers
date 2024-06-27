@@ -14,6 +14,8 @@
  * limitations under the License.
  *****************************************************************************/
 
+#include "lidar/hesai/parser/tcp_cmd_client.h"
+
 #include <arpa/inet.h>
 #include <fcntl.h>
 #include <net/if.h>
@@ -25,15 +27,15 @@
 #include <sys/socket.h>
 #include <sys/types.h>
 #include <unistd.h>
-#include <linux/sockios.h>
 
 #include <cerrno>
 #include <csignal>
 #include <cstdio>
 #include <cstring>
 
+#include <linux/sockios.h>
+
 #include "cyber/cyber.h"
-#include "lidar/hesai/parser/tcp_cmd_client.h"
 
 namespace apollo {
 namespace drivers {

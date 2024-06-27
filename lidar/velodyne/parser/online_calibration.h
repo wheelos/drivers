@@ -20,10 +20,11 @@
 #include <string>
 #include <vector>
 
+#include "lidar/velodyne/parser/calibration.h"
+
 #include "lidar/proto/velodyne.pb.h"
 
 #include "cyber/cyber.h"
-#include "lidar/velodyne/parser/calibration.h"
 
 namespace apollo {
 namespace drivers {

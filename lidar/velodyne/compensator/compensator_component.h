@@ -19,10 +19,10 @@
 #include <memory>
 #include <vector>
 
+#include "lidar/velodyne/compensator/compensator.h"
+
 #include "cyber/base/concurrent_object_pool.h"
 #include "cyber/cyber.h"
-
-#include "lidar/velodyne/compensator/compensator.h"
 
 namespace apollo {
 namespace drivers {

@@ -79,7 +79,7 @@ class ThreadPool {
   static Ptr getInstance();
   int idlCount();
   template <class F, class... Args>
-  inline auto commit(F &&f, Args &&... args)
+  inline auto commit(F &&f, Args &&...args)
       -> std::future<decltype(f(args...))> {
     if (stoped.load())
       throw std::runtime_error("Commit on ThreadPool is stopped.");

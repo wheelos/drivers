@@ -14,13 +14,13 @@
  * limitations under the License.
  *****************************************************************************/
 
+#include "lidar/velodyne/parser/velodyne_convert_component.h"
+
 #include <memory>
 #include <string>
 #include <thread>
 
 #include "cyber/cyber.h"
-
-#include "lidar/velodyne/parser/velodyne_convert_component.h"
 
 namespace apollo {
 namespace drivers {

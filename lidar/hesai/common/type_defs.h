@@ -18,6 +18,7 @@
 #define LIDAR_HESAI_SRC_TYPE_DEFS_H_
 
 #include <ctime>
+
 #include "lidar/hesai/common/const_var.h"
 
 namespace apollo {

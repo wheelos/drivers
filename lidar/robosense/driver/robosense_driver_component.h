@@ -19,8 +19,9 @@
 #include <string>
 #include <thread>
 
-#include "cyber/cyber.h"
 #include "lidar/robosense/driver/driver.h"
+
+#include "cyber/cyber.h"
 
 namespace apollo {
 namespace drivers {

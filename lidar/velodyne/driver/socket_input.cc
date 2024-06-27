@@ -25,15 +25,16 @@
  *  $Id$
  */
 
+#include "lidar/velodyne/driver/socket_input.h"
+
 #include <arpa/inet.h>
 #include <fcntl.h>
 #include <poll.h>
 #include <sys/file.h>
 #include <sys/socket.h>
 #include <unistd.h>
-#include <cerrno>
 
-#include "lidar/velodyne/driver/socket_input.h"
+#include <cerrno>
 
 namespace apollo {
 namespace drivers {

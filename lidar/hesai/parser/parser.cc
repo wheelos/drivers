@@ -14,11 +14,11 @@
  * limitations under the License.
  *****************************************************************************/
 
+#include "lidar/hesai/parser/parser.h"
+
 #include <cmath>
 #include <memory>
 #include <string>
-
-#include "lidar/hesai/parser/parser.h"
 
 namespace apollo {
 namespace drivers {

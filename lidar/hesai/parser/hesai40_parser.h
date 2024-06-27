@@ -18,8 +18,9 @@
 
 #include <memory>
 
-#include "cyber/cyber.h"
 #include "lidar/hesai/parser/parser.h"
+
+#include "cyber/cyber.h"
 
 namespace apollo {
 namespace drivers {

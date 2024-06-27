@@ -19,17 +19,18 @@
 #include <thread>
 #include <vector>
 
-#include "lidar/proto/config.pb.h"
-#include "lidar/proto/robosense.pb.h"
-#include "lidar/proto/robosense_config.pb.h"
-#include "proto/pointcloud.pb.h"
-
-#include "cyber/cyber.h"
 #include "lidar/common/driver_factory/driver_base.h"
 #include "lidar/robosense/decoder/decoder_16.hpp"
 #include "lidar/robosense/decoder/decoder_factory.hpp"
 #include "lidar/robosense/driver/utility.h"
 #include "lidar/robosense/input/input.h"
+
+#include "common_msgs/sensor_msgs/pointcloud.pb.h"
+#include "lidar/proto/config.pb.h"
+#include "lidar/proto/robosense.pb.h"
+#include "lidar/proto/robosense_config.pb.h"
+
+#include "cyber/cyber.h"
 #define PKT_DATA_LENGTH 1248
 
 namespace apollo {

@@ -18,6 +18,7 @@
 #define LIDAR_HESAI_SRC_INPUT_H_
 
 #include <cstdint>
+
 #include "lidar/hesai/common/type_defs.h"
 
 namespace apollo {

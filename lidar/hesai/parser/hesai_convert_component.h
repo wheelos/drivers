@@ -19,11 +19,12 @@
 #include <memory>
 #include <string>
 
+#include "lidar/hesai/parser/parser_factory.h"
+
 #include "lidar/proto/hesai.pb.h"
 #include "lidar/proto/hesai_config.pb.h"
 
 #include "cyber/cyber.h"
-#include "lidar/hesai/parser/parser_factory.h"
 
 namespace apollo {
 namespace drivers {

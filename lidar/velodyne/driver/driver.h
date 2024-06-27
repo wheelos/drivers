@@ -19,12 +19,12 @@
 #include <memory>
 #include <string>
 
+#include "lidar/common/driver_factory/driver_base.h"
+#include "lidar/velodyne/driver/socket_input.h"
+
 #include "lidar/proto/config.pb.h"
 #include "lidar/proto/velodyne.pb.h"
 #include "lidar/proto/velodyne_config.pb.h"
-
-#include "lidar/common/driver_factory/driver_base.h"
-#include "lidar/velodyne/driver/socket_input.h"
 
 namespace apollo {
 namespace drivers {
@@ -45,8 +45,7 @@ class VelodyneDriver : public lidar::LidarDriver {
  public:
   VelodyneDriver() {}
   explicit VelodyneDriver(const Config &config) : config_(config) {}
-  VelodyneDriver(const std::shared_ptr<cyber::Node> &node,
-                          const Config &config)
+  VelodyneDriver(const std::shared_ptr<cyber::Node> &node, const Config &config)
       : config_(config) {
     node_ = node;
   }
@@ -83,7 +82,7 @@ class Velodyne64Driver : public VelodyneDriver {
  public:
   explicit Velodyne64Driver(const Config &config) : VelodyneDriver(config) {}
   Velodyne64Driver(const std::shared_ptr<cyber::Node> &node,
-                            const Config &config) {
+                   const Config &config) {
     node_ = node;
     config_ = config;
   }

@@ -23,13 +23,14 @@
 #include <thread>
 #include <vector>
 
-#include "lidar/proto/hesai_config.pb.h"
+#include "lidar/hesai/common/type_defs.h"
+#include "lidar/hesai/parser/tcp_cmd_client.h"
+
+#include "common_msgs/sensor_msgs/pointcloud.pb.h"
 #include "lidar/proto/hesai.pb.h"
-#include "proto/pointcloud.pb.h"
+#include "lidar/proto/hesai_config.pb.h"
 
 #include "cyber/cyber.h"
-#include "lidar/hesai/parser/tcp_cmd_client.h"
-#include "lidar/hesai/common/type_defs.h"
 
 namespace apollo {
 namespace drivers {

@@ -17,13 +17,13 @@
 #pragma once
 
 #include <unistd.h>
+
 #include <cstdio>
 #include <memory>
 
-#include "cyber/cyber.h"
-
-// #include "velodyne_msgs/VelodyneScanUnified.h"
 #include "lidar/proto/velodyne.pb.h"
+
+#include "cyber/cyber.h"
 
 namespace apollo {
 namespace drivers {

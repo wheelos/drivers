@@ -17,6 +17,7 @@
 #pragma once
 
 #include <unistd.h>
+
 #include <cstdio>
 
 #include "lidar/velodyne/driver/input.h"

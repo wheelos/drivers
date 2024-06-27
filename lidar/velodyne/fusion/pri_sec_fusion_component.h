@@ -28,11 +28,12 @@
 #undef ALIVE
 #endif
 
+#include "modules/transform/buffer.h"
+
+#include "common_msgs/sensor_msgs/pointcloud.pb.h"
 #include "lidar/proto/velodyne_config.pb.h"
-#include "proto/pointcloud.pb.h"
 
 #include "cyber/cyber.h"
-#include "modules/transform/buffer.h"
 
 namespace apollo {
 namespace drivers {
