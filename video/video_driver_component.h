@@ -39,8 +39,9 @@ using apollo::drivers::video::config::CameraH265Config;
 
 class CompCameraH265Compressed : public Component<> {
  public:
+  CompCameraH265Compressed() = default;
   ~CompCameraH265Compressed() {
-    if (video_thread_->joinable()) {
+    if (video_thread_ && video_thread_->joinable()) {
       video_thread_->join();
     }
   }
@@ -51,8 +52,8 @@ class CompCameraH265Compressed : public Component<> {
 
   std::shared_ptr<apollo::cyber::Writer<CompressedImage>> writer_;
   std::shared_ptr<std::thread> video_thread_;
-  volatile bool runing_;
-  std::unique_ptr<CameraDriver> camera_deivce_;
+  volatile bool running_;
+  std::unique_ptr<CameraDriver> camera_device_;
   std::string record_folder_;
   std::shared_ptr<CompressedImage> pb_image_ = nullptr;
 };

@@ -37,8 +37,10 @@ class CameraDriver {
   explicit CameraDriver(const CameraH265Config *h265_cfg);
   ~CameraDriver() {}
 
-  bool Poll(std::shared_ptr<CompressedImage> h265);
   void Init();
+
+  bool Poll(std::shared_ptr<CompressedImage> h265);
+
   int Port() { return config_.udp_port(); }
   int Record() { return config_.record(); }
 

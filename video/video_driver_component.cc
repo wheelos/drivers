@@ -32,12 +32,12 @@ bool CompCameraH265Compressed::Init() {
     return false;
   }
 
-  AINFO << "Velodyne config: " << video_config.DebugString();
+  AINFO << "Video config: " << video_config.DebugString();
 
-  camera_deivce_.reset(new CameraDriver(&video_config));
-  camera_deivce_->Init();
+  camera_device_.reset(new CameraDriver(&video_config));
+  camera_device_->Init();
 
-  if (camera_deivce_->Record()) {
+  if (camera_device_->Record()) {
     // Use current directory to save record file if H265_SAVE_FOLDER environment
     // is not set.
     record_folder_ = cyber::common::GetEnv("H265_SAVE_FOLDER", ".");
@@ -55,7 +55,7 @@ bool CompCameraH265Compressed::Init() {
   writer_ = node_->CreateWriter<CompressedImage>(
       video_config.compress_conf().output_channel());
 
-  runing_ = true;
+  running_ = true;
   video_thread_ = std::shared_ptr<std::thread>(
       new std::thread(std::bind(&CompCameraH265Compressed::VideoPoll, this)));
   video_thread_->detach();
@@ -65,10 +65,10 @@ bool CompCameraH265Compressed::Init() {
 
 void CompCameraH265Compressed::VideoPoll() {
   std::ofstream fout;
-  if (camera_deivce_->Record()) {
+  if (camera_device_->Record()) {
     char name[256];
     snprintf(name, sizeof(name), "%s/encode_%d.h265", record_folder_.c_str(),
-             camera_deivce_->Port());
+             camera_device_->Port());
     AINFO << "Output file: " << name;
     fout.open(name, std::ios::binary);
     if (!fout.good()) {
@@ -77,8 +77,8 @@ void CompCameraH265Compressed::VideoPoll() {
   }
   int poll_failure_number = 0;
   while (!apollo::cyber::IsShutdown()) {
-    if (!camera_deivce_->Poll(pb_image_)) {
-      AERROR << "H265 poll failed on port: " << camera_deivce_->Port();
+    if (!camera_device_->Poll(pb_image_)) {
+      AERROR << "H265 poll failed on port: " << camera_device_->Port();
       static constexpr int kTolerance = 256;
       if (++poll_failure_number > kTolerance) {
         AERROR << "H265 poll keep failing for " << kTolerance << " times, Exit";
@@ -92,12 +92,12 @@ void CompCameraH265Compressed::VideoPoll() {
     AINFO << "Send compressed image.";
     writer_->Write(pb_image_);
 
-    if (camera_deivce_->Record()) {
+    if (camera_device_->Record()) {
       fout.write(pb_image_->data().c_str(), pb_image_->data().size());
     }
   }
 
-  if (camera_deivce_->Record()) {
+  if (camera_device_->Record()) {
     fout.close();
   }
 }
